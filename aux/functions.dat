@@ -1,0 +1,10 @@
+$g = 9.8
+$pi = Math::PI
+$E = Math::E
+$cos = Math.cos
+$sin = Math.sin
+$tan = Math.tan
+$atan = Math.atan
+$asin = Math.asin
+$sqrt = Math.sqrt
+$ln = Math.log

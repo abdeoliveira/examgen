@@ -1,0 +1,24 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Em condições ideais, o sistema de visão humano é capaz de perceber uma luz com um comprimento de onda de @VAR(lambda) nm se os fótons dessa luz forem absorvidos pela retina à razão de pelo menos 100 fótons por segundo. Qual a potência luminosa absorvida pela retina nessas condições em unidades de eV/s?
+
+@figure
+
+file:none
+width:10.0cm
+
+@answer
+
+lambda:500,600,0
+correct:100*1240.0/$lambda
+minmax:100,300,0
+
+@end
+
+
+
