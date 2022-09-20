@@ -1,7 +1,9 @@
 # Exam Generator 
 
-Professors with focus on, but not restricted to, math sciences can generate individualised exams to apply for students.
-More to be written here soon...
+Professors with focus on (but not restricted to) math sciences can generate individualised exams for each student.
+Despite the questions are the same, variables and consequently the answers are different. Latex is in charge to beautifully build the PDFs.
+
+Last but not least, and application for correction from scanned exam images is included. 
 
 # Dependencies
 
