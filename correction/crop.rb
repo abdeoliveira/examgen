@@ -2,7 +2,7 @@ require 'mini_magick'
 class CROP
   def initialize(file)
   #------------------------
-    frame_tol  = 0.5    # tolerance for frame's black color
+    frame_tol  = 0.6  # tolerance for frame's black color
     left = true
   #-----------------------
 #=========IMPORT RAW IMAGE======================  

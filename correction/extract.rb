@@ -1,7 +1,7 @@
 class EXTRACT
   def initialize(image)
 #==============================
-    tolerance = 0.25 # FOR QUESTIONS AND STUDENT ID
+    tolerance = 0.3 # FOR QUESTIONS AND STUDENT ID
 #==============================
   auxdata = File.readlines('../session/auxfile').first.split(' ')
   num_exams = auxdata[0].to_i
@@ -13,8 +13,8 @@ class EXTRACT
   num_lines = ndigits + factor*(num_alts+1) + 8 + 3
   num_cols = q_in_line + 1
   pixels = image.get_pixels
-  dx = (image.width.to_f/num_cols).round
-  dy = (image.height.to_f/num_lines).round
+  dx = (image.width.to_f/num_cols).floor
+  dy = (image.height.to_f/num_lines).floor
 #====BLACK PIXEL FUNCTION===========
   def black_pixel(l,c,pixels)
     red   = pixels[l][c][0]
@@ -32,9 +32,10 @@ class EXTRACT
         x = (i+1)*dx + dx/2 - f*q_in_line*dx
         q_count = 0
         num_alts.times do |j|  
-          y = f*(num_alts+1)*dy + (j+ndigits+3)*dy + dy/2
+          y = f*(num_alts+1)*dy + (j+ndigits+3)*dy + dy/2 
           count = 0
           black = 0
+          ####if j==4 and i==9 then puts "#{x} #{y}" end
           (y-dy/4).upto(y+dy/4) do |l|
             (x-dx/4).upto(x+dx/4) do |c|
               count+=1
@@ -47,34 +48,37 @@ class EXTRACT
     end
 #===============STUDENT ID============
     student_error = false
+    tol_id = tolerance
     stuid = Array.new(7,'?')
     7.times do |j|
       id_count=0
-      y = (j+ndigits+(num_alts+1)*factor+4)*dy + dy/2
+      y = (j+ndigits+(num_alts+1)*factor+4)*dy + dy/2 + (0.6*j).floor 
       10.times do |i|
-        x = (i+1)*dx + dx/2
+        x = (i+1)*dx + dx/2  
         count = 0
         black = 0
+        ####if j==2 and i==4 then puts "#{x} #{y}" end
         (y-dy/4).upto(y+dy/4) do |l|
           (x-dx/4).upto(x+dx/4) do |c|
-           if c < image.width and l < image.height #IN RARE CASES, c AND l TRESPASS IMAGE LIMITS
+           if c < image.width and l < image.height #AVOID c AND l TRESPASS IMAGE LIMITS
             count+=1
              black = black_pixel(l,c,pixels) + black
            end
           end
         end
-        if black/count > tolerance then id_count+=1; stuid[j] = i end
+        if black/count > tol_id then id_count+=1; stuid[j] = i; tol_id = black/count end
       end
-      unless id_count==1 then student_error = true; stuid[j] = '?' end
+      #unless id_count==1 then student_error = true; stuid[j] = '?' end
+      tol_id = tolerance
     end
 #===========EXAM ID===================
   exam_error = false
   examid = 0
   ndigits.times do |n|
     dig_count=0
-    y = (n+1)*dy + dy/2
+    y = (n+1)*dy + dy/2  
     10.times do |i|
-      x = (i+1)*dx + dx/2
+      x = (i+1)*dx + dx/2   
       count = 0
       black = 0
       (y-dy/4).upto(y+dy/4) do |l|
@@ -83,7 +87,7 @@ class EXTRACT
           black = black_pixel(l,c,pixels) + black
         end
       end
-      if black/count > 0.75 then dig_count+=1; examid = examid + i*10**n end
+      if black/count > tolerance then dig_count+=1; examid = examid + i*10**n end
     end
     unless dig_count==1 then exam_error = true end
   end
