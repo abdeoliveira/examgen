@@ -1,5 +1,7 @@
 # Exam Generator 
 
+This is the Dev Branch. Do not expect stability here.
+
 Professors with focus on (but not restricted to) math sciences can generate individualised exams for each student.
 Despite the questions are the same, variables and consequently the answers are different. Latex is in charge to beautifully build the PDFs.
 
