@@ -6,7 +6,7 @@ Latex is in charge to beautifully build the PDFs.
 
 Last but not least, an application for correction is included. All you have to do is to scan the exams and provide the images to the Correction application. 
 See Usage section for details. The correction code will read the images and extract students answers.Then, it will compare them to the right keys, i.e., it will
-perform the correction process it self. Finally, a .csv file report is generated with students scores.
+perform the correction process itself. Finally, a .csv file report is generated with students scores.
 
 # Dependencies
 
@@ -16,4 +16,4 @@ perform the correction process it self. Finally, a .csv file report is generated
 
 # Usage
 
-You need to create exam questions in a specific format, put them into the input folder and name them with a .gnxs extension. Questions can be of two types: numeric or text. Please find question templates in the input folder.
+You need to create exam questions in a specific format, put them into the input folder and name them with a .gnxs extension. Questions can be of two types: numeric or text. Please find question templates in the input folder. 

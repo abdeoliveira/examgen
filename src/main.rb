@@ -12,7 +12,7 @@ require './rotation'
 #======== ADJUST THIS BEFORE RUNNING============
 
 nalts = 5
-num_exams = 38
+num_exams = 1
 q_in_line = 10 # For the form.rb. Currently only 10 is allowed
 
 #==========THE JANITOR OPENS THE SCHOOL===============
