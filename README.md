@@ -28,6 +28,8 @@ You need to create exam questions in a specific format, necessarily with `.gnxs`
 
 Question files must have 4 blocks, which are `@config`, `@question`, `@figure`, and `@answer`, and must terminate with `@end`.
 
+You can adjust the number of alternatives for questions globally, i.e., all questions must have the same number of alternatives. This subject will be approached later.
+
 ### The `@config` block
 
 It has 2 entries: `mode:` and `inline:`. 
@@ -37,6 +39,14 @@ It has 2 entries: `mode:` and `inline:`.
 
 `inline:` expects an integer number as argment and it stands for the number of alternatives in one line. Something between 5 and 8 do well for `mode:numeric` (e.g. `inline:8`) 
 and I recommend `inline:1` for `mode:text`
+
+Check screenshots with `inline:` variable in action. Hoover mouse pointer for caption.
+
+![alt text](screenshots/inline-1.png "inline:1")
+
+![alt text](screenshots/inline-2.png "inline:2")
+
+![alt text](screenshots/inline-5.png "inline:5")
 
 
 ### The `@question` block

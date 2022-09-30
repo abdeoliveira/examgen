@@ -1,0 +1,28 @@
+@config
+
+mode: text
+inline: 1
+
+@question
+
+Mark the true alternative.
+
+@figure
+
+file:none
+width:8.5cm
+
+@answer
+
+false:Division between vectors is defined in Mathematics.
+false:The result of a scalar product between vectors is a vector itself. 
+false:Vectors can not be multiplied by scalars.
+false:A vector multiplied by a scalar results is a vector with different direction.
+false:The result of summing a vector and a scalar is a scalar.
+true:The vectorial product between collinear vectors is zero.
+true:If $\vec{A}$ and $\vec{B}$ are vectors, then $\vec{A}\times\vec{B}$ is a vector perpendicular to both $\vec{A}$ and $\vec{B}$.
+
+@end
+
+
+
