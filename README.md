@@ -28,19 +28,21 @@ You need to create exam questions in a specific format, necessarily with `.gnxs`
 
 Question files must have 4 blocks, which are `@config`, `@question`, `@figure`, and `@answer`, and must terminate with `@end`.
 
-+ @config block
+### The `@config` block
 
-Has 2 entries: `mode` and `inline`.
+It has 2 entries: `mode:` and `inline:`. 
 
-++ `mode` can be `numeric` or `text`. 
+`mode:` can be `numeric` or `text`. `numeric` is intended for questions in which the student must calculate the answer, with alternatives as numbers. 
+`text`: is intended for questions with alternatives as written texts. 
 
-+++ `numeric`: is intended for questions in which the student must calculate the answer, with alternatives as numbers.
-+++ `text`: is intended for questions with alternatives as written texts. 
-
-Questions can be of two types: numeric or text. Please find question templates in the input folder. 
-
+`inline:` expects an integer number as argment and it stands for the number of alternatives in one line. Something between 5 and 8 do well for `mode:numeric` (e.g. `inline:8`) 
+and I recommend `inline:1` for `mode:text`
 
 
+### The `@question` block
+
+The only entry is a written text following [LaTex](https://www.latex-project.org/) format. Thus equations, bolds, italics, colors and so on, will all follow LaTex format.  
+**Note:** If `mode:numeric` was chosen then you have to deal with the `@VAR()` function in the `@question` block . Better than spending my whole [Mana](https://en.wikipedia.org/wiki/Magic_(game_terminology)) trying to explain the `@VAR()` function, I prefer to give a couple of examples of its usage. 
 
 
 
