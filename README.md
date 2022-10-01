@@ -14,6 +14,16 @@ perform the correction process itself. Finally, a .csv file report is generated 
 2. tex-live
 3. Ruby gems: mini_magick, date, and csv.
 
+If you are using a debian-based distribution, something like 
+
+`sudo apt-get install ruby ruby-dev texlive-latex-base texlive-science`
+
+and also 
+
+`gem install mini_magick csv date`
+
+will solve the aforementioned dependencies. For other distros, please check distro-specific docs for directions.
+
 # Usage
 
 First, you need to clone this repo (this is the jargon for donwload this whole git project). For doing that you need to have [git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on your machine. 
@@ -21,6 +31,25 @@ First, you need to clone this repo (this is the jargon for donwload this whole g
 Once you have git, cast `git clone https://github.com/abdeoliveira/examgen`
 
 From now on, I will assume `~` as being the cloned repo folder, i.e., `cd examgen`.
+
+## Language and localization
+
+Despite the docs and comments through the codes are in English, the LaTex header was conceived to work with the pt_br locale as follows:
+
+* Words are separated according the Portuguese language.
+* Comma is used as decimal separator.
+
+If you want to localize your text to other language, you must edit the file `~/aux/header.tex` in two lines. 
+The first is indeed the first line, which reads `\documentclass[9pt,twocolumn,brazil]{article}`,
+in which you can change `brazil` for whatever you want. Yet, you may wish to tune font size (`9pt`) and the other variables.
+
+The second is the line ```\mathcode`,="002C```. Commenting this line makes LaTex to use 'point' instead of 'comma' for decimal separator.  
+
+## Exam Header
+
+xxx
+
+
 
 ## Creating questions
 
@@ -40,7 +69,7 @@ It has 2 entries: `mode:` and `inline:`.
 `inline:` expects an integer number as argment and it stands for the number of alternatives in one line. Something between 5 and 8 do well for `mode:numeric` (e.g. `inline:8`) 
 and I recommend `inline:1` for `mode:text`
 
-Check screenshots with `inline:` variable in action. Hoover mouse pointer for caption.
+Check screenshots with `inline:` variable in action. 
 
 
 **inline:1**
