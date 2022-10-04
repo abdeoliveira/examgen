@@ -30,12 +30,11 @@ will solve the aforementioned dependencies. For other distros, please check dist
 
 If you are in a hurry, and want a quick result, do as follows:
 
-1. Check if your system meets the necessary dependencies (check the Dependencies section below)
-2. Install git (in debian-based distros, do `sudo update && sudo apt install git`)
-3. Clone this repo: `git clone https://github.com/abdeoliveira/examgen`
-4. Enter the `src` dir inside the repo folder: `cd examgen/src`
-5. Copy the auxiliary script into the `src` folder: `cp ../candy/test.sh .`
-6. Run the auxiliary script: `./test.sh`
+1. Install git (in debian-based distros, do `sudo update && sudo apt install git`)
+2. Clone this repo: `git clone https://github.com/abdeoliveira/examgen`
+3. Enter the `src` dir inside the repo folder: `cd examgen/src`
+4. Copy the auxiliary script into the `src` folder: `cp ../candy/test.sh .`
+5. Run the auxiliary script: `./test.sh`
 
 If everything went well a PDF will opened in your screen containing a sample exam.
 
