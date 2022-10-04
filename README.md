@@ -26,6 +26,21 @@ will solve the aforementioned dependencies. For other distros, please check dist
 
 # Usage
 
+## Quick Start
+
+If you are in a hurry, and want a quick result, do as follows:
+
+1. Check if your system meets the necessary dependencies (check the Dependencies section below)
+2. Install git (in debian-based distros, do `sudo update && sudo apt install git`)
+3. Clone this repo: `git clone https://github.com/abdeoliveira/examgen`
+4. Enter the `src` dir inside the repo folder: `cd examgen/src`
+5. Copy the auxiliary script into the `src` folder: `cp ../candy/test.sh .`
+6. Run the auxiliary script: `./test.sh`
+
+If everything went well a PDF will opened in your screen containing a sample exam.
+
+## Manual
+
 First, you need to clone this repo (this is the jargon for donwload this whole git project). For doing that you need to have [git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on your machine. 
 
 Once you have git, cast `git clone https://github.com/abdeoliveira/examgen`
@@ -36,7 +51,7 @@ From now on, I will assume `~` as being the cloned repo folder, i.e., `cd examge
 
 Despite the docs and comments through the codes are in English, the LaTex header was conceived to work with the pt_br locale as follows:
 
-* Words are separated according the Portuguese language.
+* Words are separated according to the Portuguese language.
 * Comma is used as decimal separator.
 
 If you want to localize your text to other language, you must edit the file `~/aux/header.tex` in two lines. 
@@ -58,7 +73,6 @@ You need to create exam questions in a specific format, necessarily with `.gnxs`
 Question files must have 4 blocks, which are `@config`, `@question`, `@figure`, and `@answer`, and must terminate with `@end`.
 
 You can adjust the number of alternatives for questions globally, i.e., all questions must have the same number of alternatives. This subject will be approached later.
-
 ### The `@config` block
 
 It has 2 entries: `mode:` and `inline:`. 
@@ -69,7 +83,7 @@ It has 2 entries: `mode:` and `inline:`.
 `inline:` expects an integer number as argment and it stands for the number of alternatives in one line. Something between 5 and 8 do well for `mode:numeric` (e.g. `inline:8`) 
 and I recommend `inline:1` for `mode:text`
 
-Check screenshots with `inline:` variable in action. 
+Check screenshots with the `inline:` variable in action. 
 
 
 **inline:1**
