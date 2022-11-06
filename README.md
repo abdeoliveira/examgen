@@ -56,9 +56,9 @@ Despite the docs and comments through the codes are in English, the LaTex header
 
 If you want to localize your text to other language, you must edit the file `~/aux/header.tex` in two lines. 
 The first is indeed the first line, which reads `\documentclass[9pt,twocolumn,brazil]{article}`,
-in which you can change `brazil` for whatever you want. Yet, you may wish to tune font size (`9pt`) and the other variables.
+in which you can change `brazil` and accomodate your needs.
 
-The second is the line ```\mathcode`,="002C```. Commenting this line makes LaTex to use 'point' instead of 'comma' for decimal separator.  
+The second place is the line ```\mathcode`,="002C```. Commenting this line, i.e. putting a `%` in front of it,  makes LaTex to use 'point' instead of 'comma' for decimal separator.  
 
 ## Exam Header
 
