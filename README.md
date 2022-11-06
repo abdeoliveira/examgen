@@ -12,11 +12,12 @@ perform the correction process itself. Finally, a .csv file report is generated 
 
 1. ruby
 2. tex-live
-3. Ruby gems: mini_magick, date, and csv.
+3. ImageMagick
+4. Ruby gems: mini_magick, date, and csv.
 
 If you are using a debian-based distribution, something like 
 
-`sudo apt-get install ruby ruby-dev texlive-latex-base texlive-science`
+`sudo apt-get install ruby ruby-dev texlive-latex-base texlive-science imagemagick`
 
 and also 
 
@@ -83,7 +84,6 @@ It has 2 entries: `mode:` and `inline:`.
 and I recommend `inline:1` for `mode:text`
 
 Check screenshots with the `inline:` variable in action. 
-
 
 **inline:1**
 ![alt text](screenshots/inline-1.png "inline:1")
