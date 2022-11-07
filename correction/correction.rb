@@ -8,7 +8,7 @@ require './statistics'
 scanned_exams = Dir["./IMAGES/Scan*.*"].sort!
 list = '../session/diario_classe.csv'
 logfile = '../session/session.log'
-files = Dir['../input/*.gnxs']
+files = Dir['../session/*.gnxs']
 #==A FEW INITIALIZATIONS/DEFINITIONS=====
 File.write(logfile,"",mode:'w')
 num_images = scanned_exams.length
@@ -16,6 +16,7 @@ report = REPORT.new
 count=Hash.new(0)
 stat=Hash.new
 files.each do |f|
+  f = f.sub("../session/","")
   stat[f]=0
 end
 #============================
@@ -45,5 +46,5 @@ scanned_exams.each.with_index do |file,m|
     puts log
     File.write(logfile,"#{log}\n",mode:'a')
 end
-STATISTICS.new(stat,logfile,num_images)
+unless num_images==0 then STATISTICS.new(stat,logfile,num_images) end
 #==========================

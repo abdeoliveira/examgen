@@ -30,10 +30,10 @@ class EXTRACT
     ans = Array.new(num_quest,'blank')
       num_quest.times do |i|
         f = i/q_in_line
-        x = (i+1)*dx + dx/2 - f*q_in_line*dx
+        x = (i+1)*dx + dx/2 - f*q_in_line*dx + (0.5*i).to_i
         q_count = 0
         num_alts.times do |j|  
-          y = f*(num_alts+1)*dy + (j+ndigits+3)*dy + dy/2 
+          y = f*(num_alts+1)*dy + (j+ndigits+3)*dy + dy/2 + 5 
           count = 0
           black = 0
           (y-dy/4).upto(y+dy/4) do |l|
@@ -52,9 +52,9 @@ class EXTRACT
     stuid = Array.new(7,'?')
     7.times do |j|
       id_count=0
-      y = (j+ndigits+(num_alts+1)*factor+4)*dy + dy/2 + (0.6*j).floor 
+      y = (j+ndigits+(num_alts+1)*factor+4)*dy + dy/2 + 10  
       10.times do |i|
-        x = (i+1)*dx + dx/2  
+        x = (i+1)*dx + dx/2 + (0.5*i).to_i 
         count = 0
         black = 0
         (y-dy/4).upto(y+dy/4) do |l|
@@ -75,9 +75,9 @@ class EXTRACT
   examid = 0
   ndigits.times do |n|
     dig_count=0
-    y = (n+1)*dy + dy/2  
+    y = (n+1)*dy + dy/2 + 2 
     10.times do |i|
-      x = (i+1)*dx + dx/2   
+      x = (i+1)*dx + dx/2 + (0.5*i).to_i
       count = 0
       black = 0
       (y-dy/4).upto(y+dy/4) do |l|

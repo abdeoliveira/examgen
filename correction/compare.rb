@@ -7,7 +7,7 @@ class COMPARE
     ans.each.with_index do |a,j|
       if a==key[j] 
         score+=1 
-        r = rot[j]
+        r = rot[j].sub("../input/","")
         stat[r]+=1
       end
     end
