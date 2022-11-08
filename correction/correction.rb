@@ -16,7 +16,7 @@ report = REPORT.new
 count=Hash.new(0)
 stat=Hash.new
 files.each do |f|
-  f = f.sub("../session/","")
+#  f = f.sub("../session/","")
   stat[f]=0
 end
 #============================

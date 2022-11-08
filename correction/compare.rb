@@ -7,7 +7,7 @@ class COMPARE
     ans.each.with_index do |a,j|
       if a==key[j] 
         score+=1 
-        r = rot[j].sub("../input/","")
+        r = '../session/'+rot[j]
         stat[r]+=1
       end
     end

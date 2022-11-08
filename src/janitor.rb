@@ -19,10 +19,12 @@ class JANITOR
       jj = exam_index[i]
       cmd = "pdflatex temp_#{jj}.tex\n"
       File.write(file,cmd,mode:'a')
-    end
+      end
     #--------------------------
-     cmd = "pdfunite temp_*pdf output.pdf"
-     File.write(file,cmd,mode:'a')
+     cmd1 = "pdfunite temp_*pdf output.pdf\n"
+     cmd2 = "cp ../input/*.gnxs .\n"
+     File.write(file,cmd1,mode:'a')
+     File.write(file,cmd2,mode:'a')
     `chmod +x #{file}`
     #---------------------------
     auxdata="#{numexams} #{numquests} #{nalts} #{qline}"

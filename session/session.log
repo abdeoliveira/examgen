@@ -1,0 +1,23 @@
+File:0001, ["c", "g", "f", "f", "a", "e", "g", "c", "d", "a"], ID:[2, 0, 2, 1, 3, 0, 8], Exam:18, Score:2, Warnings:["Missing NAME"]
+File:0002, ["d", "b", "e", "a", "b", "f", "b", "a", "c", "a"], ID:[2, 0, 2, 1, 1, 9, 6], Exam:4, Score:1, Warnings:["Missing NAME"]
+File:0003, ["g", "g", "e", "f", "c", "a", "c", "d", "f", "a"], ID:[2, 1, 2, 1, 1, 2, 7], Exam:14, Score:0, Warnings:["Missing NAME"]
+File:0004, ["g", "c", "a", "c", "d", "e", "c", "e", "b", "f"], ID:[1, 9, 2, 1, 3, 6, 7], Exam:1, Score:3, Warnings:["Missing NAME"]
+File:0005, ["a", "e", "f", "a", "f", "b", "c", "b", "g", "f"], ID:[2, 1, 2, 1, 0, 1, 2], Exam:20, Score:1, Warnings:["Missing NAME"]
+File:0006, ["f", "d", "e", "a", "e", "f", "b", "f", "a", "c"], ID:[2, 1, 2, 1, 2, 9, 4], Exam:17, Score:0, Warnings:["Missing NAME"]
+File:0007, ["a", "e", "d", "f", "e", "c", "a", "b", "g", "d"], ID:[2, 1, 1, 1, 2, 1, 1], Exam:19, Score:2, Warnings:["Missing NAME"]
+File:0008, ["d", "c", "b", "e", "g", "c", "b", "a", "f", "g"], ID:[2, 1, 1, 1, 2, 2, 8], Exam:15, Score:1, Warnings:["Missing NAME"]
+File:0009, ["e", "c", "e", "d", "f", "f", "a", "b", "f", "b"], ID:[1, 9, 2, 1, 1, 2, 2], Exam:16, Score:1, Warnings:["Missing NAME"]
+=============STATISTICS============
+0.11 10-65.gnxs
+0.00 11-66.gnxs
+0.22 colisao_frontal.gnxs
+0.11 duas_particulas_colisao.gnxs
+0.11 metro_curva.gnxs
+0.00 objeto_para_momentaneamente.gnxs
+0.11 particla_trilhos.gnxs
+0.33 pequena_aranha_elevador.gnxs
+0.00 rifle_alvo.gnxs
+0.22 text_energia_potencial.gnxs
+-----------------
+Overall average: 0.121
+-----------------

@@ -1,8 +1,9 @@
 class EXTRACT
   def initialize(image)
 #==============================
-    tolerance = 0.3 # FOR QUESTIONS AND STUDENT ID
-    examid_tol = 0.6 # FOR EXAM ID
+    tol_quest = 0.3 # FOR QUESTIONS
+    tol_stuid = 0.1
+    tol_examid = 0.6 # FOR EXAM ID
 #==============================
   auxdata = File.readlines('../session/auxfile').first.split(' ')
   num_exams = auxdata[0].to_i
@@ -25,36 +26,46 @@ class EXTRACT
     black = 1 - white
     return black
   end
+#====LINE CORRECTION FUNCTION=======
+def line_correction(f)
+  return (f*1.025).round
+end
 #==============QUESTIONS============
     alphabet=[*'a'..'z']
     ans = Array.new(num_quest,'blank')
       num_quest.times do |i|
         f = i/q_in_line
-        x = (i+1)*dx + dx/2 - f*q_in_line*dx + (0.5*i).to_i
+        x = (i+1)*dx + dx/2 - f*q_in_line*dx 
+        x = line_correction(x)
         q_count = 0
         num_alts.times do |j|  
-          y = f*(num_alts+1)*dy + (j+ndigits+3)*dy + dy/2 + 5 
+          y = f*(num_alts+1)*dy + (j+ndigits+3)*dy + dy/2 
+          y = line_correction(y)
+         #puts "#{x} #{y}" 
           count = 0
           black = 0
           (y-dy/4).upto(y+dy/4) do |l|
             (x-dx/4).upto(x+dx/4) do |c|
-              count+=1
-              black = black_pixel(l,c,pixels) + black
+                count+=1
+                black = black_pixel(l,c,pixels) + black
             end
           end
-        if black/count > tolerance then q_count+=1; ans[i] = alphabet[j] end
+        if black/count > tol_quest then q_count+=1; ans[i] = alphabet[j] end
         if q_count > 1 then ans[i]='dupe' end
       end
     end
 #===============STUDENT ID============
     student_error = false
-    tol_stuid = tolerance
+    tol_stuid_new = tol_stuid
     stuid = Array.new(7,'?')
     7.times do |j|
       id_count=0
-      y = (j+ndigits+(num_alts+1)*factor+4)*dy + dy/2 + 10  
+      y = (j+ndigits+(num_alts+1)*factor+4)*dy + dy/2 
+      y = line_correction(y)
       10.times do |i|
-        x = (i+1)*dx + dx/2 + (0.5*i).to_i 
+        x = (i+1)*dx + dx/2  
+        x = line_correction(x)
+        #puts "#{x} #{y}"
         count = 0
         black = 0
         (y-dy/4).upto(y+dy/4) do |l|
@@ -65,19 +76,22 @@ class EXTRACT
            end
           end
         end
-        if black/count > tol_stuid then id_count+=1; stuid[j] = i; tol_stuid = black/count end
+            if black/count > tol_stuid_new then id_count+=1; stuid[j] = i; tol_stuid_new = black/count end
       end
       #unless id_count==1 then student_error = true; stuid[j] = '?' end
-      tol_stuid = tolerance
+      tol_stuid_new = tol_stuid
     end
 #===========EXAM ID===================
   exam_error = false
   examid = 0
   ndigits.times do |n|
     dig_count=0
-    y = (n+1)*dy + dy/2 + 2 
+    y = (n+1)*dy + dy/2  
+    y = line_correction(y)
     10.times do |i|
-      x = (i+1)*dx + dx/2 + (0.5*i).to_i
+      x = (i+1)*dx + dx/2 
+      x = line_correction(x)
+      #puts "#{x} #{y}"
       count = 0
       black = 0
       (y-dy/4).upto(y+dy/4) do |l|
@@ -86,7 +100,7 @@ class EXTRACT
           black = black_pixel(l,c,pixels) + black
         end
       end
-      if black/count > examid_tol then dig_count+=1; examid = examid + i*10**n end
+      if black/count > tol_examid then dig_count+=1; examid = examid + i*10**n end
     end
     unless dig_count==1 then exam_error = true end
   end

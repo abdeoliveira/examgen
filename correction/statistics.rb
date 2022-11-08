@@ -7,7 +7,9 @@ class STATISTICS
     stat.each do |k,v|
       v = (v.to_f/num_images).round(2)
       sumv = sumv + v
-      puts data="#{k} #{v}"
+      k = k.sub("../session/","")
+      if v==0 then v="0.00" end
+      puts data="#{v} #{k}"
       File.write(logfile,"#{data}\n",mode:'a')
     end
     puts final = "-----------------\nOverall average: #{(sumv/numq).round(3)}\n-----------------\n"

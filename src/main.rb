@@ -11,8 +11,8 @@ require './minmax'
 require './rotation'
 #======== ADJUST THIS BEFORE RUNNING============
 
-nalts = 5
-num_exams = 1
+nalts = 7
+num_exams = 20
 q_in_line = 10 # For the form.rb. Currently only 10 is allowed
 
 #==========THE JANITOR OPENS THE SCHOOL===============

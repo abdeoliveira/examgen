@@ -1,2 +1,22 @@
 pdflatex temp_00001.tex
+pdflatex temp_00002.tex
+pdflatex temp_00003.tex
+pdflatex temp_00004.tex
+pdflatex temp_00005.tex
+pdflatex temp_00006.tex
+pdflatex temp_00007.tex
+pdflatex temp_00008.tex
+pdflatex temp_00009.tex
+pdflatex temp_00010.tex
+pdflatex temp_00011.tex
+pdflatex temp_00012.tex
+pdflatex temp_00013.tex
+pdflatex temp_00014.tex
+pdflatex temp_00015.tex
+pdflatex temp_00016.tex
+pdflatex temp_00017.tex
+pdflatex temp_00018.tex
+pdflatex temp_00019.tex
+pdflatex temp_00020.tex
 pdfunite temp_*pdf output.pdf
+cp ../input/*.gnxs .
