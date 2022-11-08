@@ -2,9 +2,10 @@ class LATEX
 
 #===NEW EXAM - WRITE HEADER========
     
-    def newdoc(output,examnumber)
+    def newdoc(output,examnumber,build)
       header = File.read('../aux/header.tex')
       header = header.sub('@EXAMID',examnumber)
+      header = header.sub('@BUILD',build)
       File.write(output,header,mode:'w')
     end
 

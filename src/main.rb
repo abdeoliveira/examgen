@@ -13,6 +13,7 @@ require './rotation'
 
 nalts = ARGV[1].to_i
 num_exams = ARGV[0].to_i
+build = ARGV[2]
 q_in_line = 10 # For the form.rb. Currently only 10 is allowed
 
 #==========THE JANITOR OPENS THE SCHOOL===============
@@ -34,14 +35,14 @@ texfile = '../session/temp'
 num_exams.times do |j|
 
   files = files.shuffle # Scramble questions among exams ;-)
-  examnumber = ['\#',j+1].join
+  examnumber = (j+1).to_s
 
 #===========INITIALIZE SOME LATEX STUFF=================
 
   jj = exam_index[j]
   output = [texfile,"_#{jj}.tex"].join
   latex = LATEX.new
-  latex.newdoc(output,examnumber)
+  latex.newdoc(output,examnumber,build)
 
 #=======WRITE ROTATED QUESTIONS TO FILES========================
   

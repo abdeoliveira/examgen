@@ -1,0 +1,12 @@
+pdflatex temp_00001.tex
+pdflatex temp_00002.tex
+pdflatex temp_00003.tex
+pdflatex temp_00004.tex
+pdflatex temp_00005.tex
+pdflatex temp_00006.tex
+pdflatex temp_00007.tex
+pdflatex temp_00008.tex
+pdflatex temp_00009.tex
+pdflatex temp_00010.tex
+pdfunite temp_*pdf output.pdf
+cp ../input/*.gnxs .
