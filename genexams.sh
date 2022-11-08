@@ -13,13 +13,9 @@ fi
 if [[ $2 != "" ]];then
 	NUM_ALTS=$2
 fi
-if [[ ! -d session_backups && -d ./session ]];then
-	mkdir session_backups
-fi
-
 NOW=$(date +"%Y.%m.%d_%H.%M.%S")
 if [[ -d ./session ]];then
-	mv session ./session_backups/session_$NOW
+	mv session ./session_$NOW
 fi
 cd ./src && ruby main.rb $NUM_EXAMS $NUM_ALTS
 cd ../session && ./script && gio open output.pdf
