@@ -50,7 +50,7 @@ end
           black = 0
           (y-dy/4).upto(y+dy/4) do |l|
             (x-dx/4).upto(x+dx/4) do |c|
-                if c < image.width and l < image.height #AVOID c AND l TRESPASS IMAGE LIMITS
+                if c < image.width and l < image.height #PREVENT c AND l TRESPASS IMAGE LIMITS
                   count+=1
                   black = black_pixel(l,c,pixels) + black
                 end
@@ -76,7 +76,7 @@ end
         black = 0
         (y-dy/4).upto(y+dy/4) do |l|
           (x-dx/4).upto(x+dx/4) do |c|
-           if c < image.width and l < image.height #AVOID c AND l TRESPASS IMAGE LIMITS
+           if c < image.width and l < image.height #PREVENT c AND l TRESPASS IMAGE LIMITS
              count+=1
              black = black_pixel(l,c,pixels) + black
            end
@@ -102,7 +102,7 @@ end
       black = 0
       (y-dy/4).upto(y+dy/4) do |l|
         (x-dx/4).upto(x+dx/4) do |c|
-           if c < image.width and l < image.height #AVOID c AND l TRESPASS IMAGE LIMITS
+           if c < image.width and l < image.height #PREVENT c AND l TRESPASS IMAGE LIMITS
               count+=1
               black = black_pixel(l,c,pixels) + black
            end

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (preloaded format=pdflatex 2022.10.29)  7 NOV 2022 09:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (preloaded format=pdflatex 2022.10.29)  8 NOV 2022 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -310,68 +310,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--65
+
+ []
+
 <../input/figs/fig1.png, id=1, 373.395pt x 338.26375pt>
 File: ../input/figs/fig1.png Graphic file (type png)
 <use ../input/figs/fig1.png>
-Package pdftex.def Info: ../input/figs/fig1.png  used on input line 51.
+Package pdftex.def Info: ../input/figs/fig1.png  used on input line 67.
 (pdftex.def)             Requested size: 113.81102pt x 103.1006pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--59
+Underfull \hbox (badness 10000) in paragraph at lines 66--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--104
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--113
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--122
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--131
+Underfull \hbox (badness 10000) in paragraph at lines 75--82
 
  []
 
 <../input/figs/fig-10-65.png, id=2, 349.305pt x 312.16624pt>
 File: ../input/figs/fig-10-65.png Graphic file (type png)
 <use ../input/figs/fig-10-65.png>
-Package pdftex.def Info: ../input/figs/fig-10-65.png  used on input line 133.
+Package pdftex.def Info: ../input/figs/fig-10-65.png  used on input line 84.
 (pdftex.def)             Requested size: 113.81102pt x 101.71004pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--141
+Underfull \hbox (badness 10000) in paragraph at lines 83--91
 
  []
 
 
-Overfull \hbox (6.59846pt too wide) detected at line 166
+Underfull \hbox (badness 10000) in paragraph at lines 92--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--131
+
+ []
+
+
+Overfull \hbox (6.59846pt too wide) detected at line 156
 []
  []
 
@@ -385,10 +385,10 @@ ng> <../input/figs/fig-10-65.png>]
 <../aux/matricula.png, id=17, 460.72125pt x 423.5825pt>
 File: ../aux/matricula.png Graphic file (type png)
 <use ../aux/matricula.png>
-Package pdftex.def Info: ../aux/matricula.png  used on input line 168.
+Package pdftex.def Info: ../aux/matricula.png  used on input line 158.
 (pdftex.def)             Requested size: 170.71652pt x 156.94928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--169
+Underfull \hbox (badness 10000) in paragraph at lines 156--159
 
  []
 
@@ -396,11 +396,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--169
 Here is how much of TeX's memory you used:
  4289 strings out of 478994
  56708 string characters out of 5864718
- 415198 words of memory out of 5000000
+ 414198 words of memory out of 5000000
  21736 multiletter control sequences out of 15000+600000
  406963 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,74p,690b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,74p,689b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc
 /dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
@@ -412,7 +412,7 @@ amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 are/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/
 fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm1000.pfb>
-Output written on temp_00004.pdf (2 pages, 344000 bytes).
+Output written on temp_00004.pdf (2 pages, 343370 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream

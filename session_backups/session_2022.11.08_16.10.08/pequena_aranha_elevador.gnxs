@@ -1,0 +1,24 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Uma pequena aranha de peso $P_a$ está pendurada na ponta de um fio de teia, no teto de um elevador. Sabendo-se que o fio suporta uma tensão máxima de $@VAR(n)P_a$, qual seria a mínima aceleração (em m/s$^2$) de subida do elevador para que o fio se partisse?
+
+@figure
+
+file:none
+width:4.0cm
+
+@answer
+
+n:2,10,1
+correct:10.0*($n-1)
+minmax:auto,1
+
+@end
+
+
+
