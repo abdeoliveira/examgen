@@ -2,7 +2,7 @@ class EXTRACT
   def initialize(image)
 #==============================
     tol_quest = 0.3 # FOR QUESTIONS
-    tol_stuid = 0.1
+    tol_stuid = 0.1 # FOR STUDENT ID
     tol_examid = 0.6 # FOR EXAM ID
 #==============================
   auxdata = File.readlines('../session/auxfile').first.split(' ')
@@ -17,6 +17,10 @@ class EXTRACT
   pixels = image.get_pixels
   dx = (image.width.to_f/num_cols).floor
   dy = (image.height.to_f/num_lines).floor
+  xmax = (q_in_line+1)*dx
+  ymax = (num_lines)*dy
+  yboost = image.height.to_f/ymax
+  xboost = image.width.to_f/xmax
 #====BLACK PIXEL FUNCTION===========
   def black_pixel(l,c,pixels)
     red   = pixels[l][c][0]
@@ -27,8 +31,8 @@ class EXTRACT
     return black
   end
 #====LINE CORRECTION FUNCTION=======
-def line_correction(f)
-  return (f*1.025).round
+def line_correction(f,boost)
+  return (f*boost).round
 end
 #==============QUESTIONS============
     alphabet=[*'a'..'z']
@@ -36,11 +40,11 @@ end
       num_quest.times do |i|
         f = i/q_in_line
         x = (i+1)*dx + dx/2 - f*q_in_line*dx 
-        x = line_correction(x)
+        x = line_correction(x,xboost)
         q_count = 0
         num_alts.times do |j|  
           y = f*(num_alts+1)*dy + (j+ndigits+3)*dy + dy/2 
-          y = line_correction(y)
+          y = line_correction(y,yboost)
          #puts "#{x} #{y}" 
           count = 0
           black = 0
@@ -63,10 +67,10 @@ end
     7.times do |j|
       id_count=0
       y = (j+ndigits+(num_alts+1)*factor+4)*dy + dy/2 
-      y = line_correction(y)
+      y = line_correction(y,yboost)
       10.times do |i|
         x = (i+1)*dx + dx/2  
-        x = line_correction(x)
+        x = line_correction(x,xboost)
         #puts "#{x} #{y}"
         count = 0
         black = 0
@@ -89,10 +93,10 @@ end
   ndigits.times do |n|
     dig_count=0
     y = (n+1)*dy + dy/2  
-    y = line_correction(y)
+    y = line_correction(y,yboost)
     10.times do |i|
       x = (i+1)*dx + dx/2 
-      x = line_correction(x)
+      x = line_correction(x,xboost)
       #puts "#{x} #{y}"
       count = 0
       black = 0
