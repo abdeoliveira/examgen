@@ -28,7 +28,7 @@ class EXTRACT
   end
 #====LINE CORRECTION FUNCTION=======
 def line_correction(f)
-  return (f*1.02).round
+  return (f*1.025).round
 end
 #==============QUESTIONS============
     alphabet=[*'a'..'z']
@@ -46,8 +46,10 @@ end
           black = 0
           (y-dy/4).upto(y+dy/4) do |l|
             (x-dx/4).upto(x+dx/4) do |c|
-                count+=1
-                black = black_pixel(l,c,pixels) + black
+                if c < image.width and l < image.height #AVOID c AND l TRESPASS IMAGE LIMITS
+                  count+=1
+                  black = black_pixel(l,c,pixels) + black
+                end
             end
           end
         if black/count > tol_quest then q_count+=1; ans[i] = alphabet[j] end
@@ -71,7 +73,7 @@ end
         (y-dy/4).upto(y+dy/4) do |l|
           (x-dx/4).upto(x+dx/4) do |c|
            if c < image.width and l < image.height #AVOID c AND l TRESPASS IMAGE LIMITS
-            count+=1
+             count+=1
              black = black_pixel(l,c,pixels) + black
            end
           end
@@ -96,8 +98,10 @@ end
       black = 0
       (y-dy/4).upto(y+dy/4) do |l|
         (x-dx/4).upto(x+dx/4) do |c|
-          count+=1
-          black = black_pixel(l,c,pixels) + black
+           if c < image.width and l < image.height #AVOID c AND l TRESPASS IMAGE LIMITS
+              count+=1
+              black = black_pixel(l,c,pixels) + black
+           end
         end
       end
       if black/count > tol_examid then dig_count+=1; examid = examid + i*10**n end
