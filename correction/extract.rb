@@ -28,7 +28,7 @@ class EXTRACT
   end
 #====LINE CORRECTION FUNCTION=======
 def line_correction(f)
-  return (f*1.025).round
+  return (f*1.02).round
 end
 #==============QUESTIONS============
     alphabet=[*'a'..'z']
