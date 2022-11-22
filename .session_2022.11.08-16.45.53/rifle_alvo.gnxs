@@ -1,0 +1,25 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Um rifle, que atira balas a @VAR(v0) m/s, é apontado para um alvo situado a @VAR(A) m de distância. Se o centro do alvo está na mesma altura do rifle, para que altura (\textbf{em centímetros}) acima do alvo o cano do rifle deve ser apontado para que a bala atinja o seu centro?
+
+@figure
+
+file:none
+width:4.0cm
+
+@answer
+
+v0:400,500,0
+A:50,200,0
+correct:100.0*$A*Math.tan(0.5*Math.asin(10.0*$A/$v0**2))
+minmax:auto,1
+
+@end
+
+
+

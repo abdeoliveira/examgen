@@ -13,8 +13,8 @@ files = Dir['../session/*.gnxs']
 File.write(logfile,"",mode:'w')
 num_images = scanned_exams.length
 report = REPORT.new
-count=Hash.new(0)
-stat=Hash.new
+count = Hash.new(0)
+stat = Hash.new
 files.each do |f|
   stat[f]=0
 end

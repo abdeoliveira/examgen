@@ -17,11 +17,11 @@ class EXTRACT
   pixels = image.get_pixels
   dx = (image.width.to_f/num_cols).floor
   dy = (image.height.to_f/num_lines).floor
-  xmax = (q_in_line+1)*dx
-  ymax = (num_lines)*dy
-  yboost = image.height.to_f/ymax
+  xmax = (q_in_line + 1)*dx
+  ymax =  num_lines*dy
   xboost = image.width.to_f/xmax
-#====BLACK PIXEL FUNCTION===========
+  yboost = image.height.to_f/ymax
+  #====BLACK PIXEL FUNCTION===========
   def black_pixel(l,c,pixels)
     red   = pixels[l][c][0]
     green = pixels[l][c][1]
