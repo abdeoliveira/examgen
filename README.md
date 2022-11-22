@@ -34,7 +34,7 @@ If you are in a hurry, and want a quick result, do as follows:
 1. Install git (in debian-based distros, do `sudo update && sudo apt install git`)
 2. Clone this repo: `git clone https://github.com/abdeoliveira/examgen`
 3. Enter the `examgen` dir: `cd examgen`
-4. Run the `examgen.sh` script: `./examgen.sh`
+4. Run the `examgen.sh` script: `./examgen.sh 1`
 
 If everything went well a PDF will opened in your screen containing a sample exam.
 

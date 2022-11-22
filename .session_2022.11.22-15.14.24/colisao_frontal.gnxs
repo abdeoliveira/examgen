@@ -1,0 +1,24 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Considere uma colis\~ao frontal el\'astica entre duas part\'{i}culas de massas $m$ e $m^{\prime}=@VAR(l)m$. A part\'{i}cula de massa $m$ se move inicialmente com velocidade $v$, enquanto a outra encontra-se em repouso. Qual é a fra\c c\~ao de energia cin\'etica transferida de $m$ para $m^{\prime}$ durante a colisão?
+
+@figure
+
+file:none
+width:4.0cm
+
+@answer
+
+l:1,20,0
+correct:4.0*$l/(1+$l)**2
+minmax:0.01,0.99,2
+
+@end
+
+
+

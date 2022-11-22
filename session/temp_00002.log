@@ -2,8 +2,8 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (prelo
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**temp_00001.tex
-(./temp_00001.tex
+**temp_00002.tex
+(./temp_00002.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -232,8 +232,8 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [9pt].
 
-No file temp_00001.aux.
-\openout1 = `temp_00001.aux'.
+No file temp_00002.aux.
+\openout1 = `temp_00002.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
@@ -320,53 +320,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--63
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--98
-
- []
-
 <../input/figs/fig1.png, id=1, 373.395pt x 338.26375pt>
 File: ../input/figs/fig1.png Graphic file (type png)
 <use ../input/figs/fig1.png>
-Package pdftex.def Info: ../input/figs/fig1.png  used on input line 100.
+Package pdftex.def Info: ../input/figs/fig1.png  used on input line 65.
 (pdftex.def)             Requested size: 113.81102pt x 103.1006pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--113
+Underfull \hbox (badness 10000) in paragraph at lines 64--71
 
  []
 
 <../input/figs/fig-10-65.png, id=2, 349.305pt x 312.16624pt>
 File: ../input/figs/fig-10-65.png Graphic file (type png)
 <use ../input/figs/fig-10-65.png>
-Package pdftex.def Info: ../input/figs/fig-10-65.png  used on input line 115.
+Package pdftex.def Info: ../input/figs/fig-10-65.png  used on input line 73.
 (pdftex.def)             Requested size: 113.81102pt x 101.71004pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--121
+Underfull \hbox (badness 10000) in paragraph at lines 72--79
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--121
 
  []
 
@@ -392,7 +395,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--149
 
  []
 
-[2 <../aux/matricula.png>] (./temp_00001.aux) ) 
+[2 <../aux/matricula.png>] (./temp_00002.aux) ) 
 Here is how much of TeX's memory you used:
  4289 strings out of 478994
  56708 string characters out of 5864718
@@ -400,7 +403,7 @@ Here is how much of TeX's memory you used:
  21736 multiletter control sequences out of 15000+600000
  406963 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,74p,690b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,74p,689b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc
 /dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
@@ -412,7 +415,7 @@ amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 are/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/
 fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm1000.pfb>
-Output written on temp_00001.pdf (2 pages, 342630 bytes).
+Output written on temp_00002.pdf (2 pages, 342943 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
