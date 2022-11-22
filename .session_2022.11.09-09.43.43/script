@@ -1,0 +1,3 @@
+pdflatex temp_00001.tex
+pdfunite temp_*pdf output.pdf
+cp ../input/*.gnxs .

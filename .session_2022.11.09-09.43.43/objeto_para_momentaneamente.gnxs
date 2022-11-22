@@ -1,0 +1,25 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Considere um objeto que se move em uma dimens\~ao de acordo com a equa\c c\~ao hor\'aria $x=v_0 t e^{-t/t_0}$, onde $t$ \'e o tempo, $v_0 = @VAR(v0)$ m/s  e $t_0 = @VAR(t0)$ s. Qual \'e a dist\^ancia, em metros, que o objeto se encontra da origem quando para momentaneamente?
+
+@figure
+
+file:none
+width:4.0cm
+
+@answer
+
+v0:10,20,1
+t0:1,2,1
+correct:$v0*$t0/2.718281828
+minmax:auto,1
+
+@end
+
+
+
