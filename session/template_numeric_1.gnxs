@@ -1,0 +1,25 @@
+@config
+
+mode:numeric
+inline:2
+
+@question
+
+A particle of mass @VAR(m) kg is subject to an external force of @VAR(F) N. Calculate the acceleration in m/s$^2$ in a one-dimensional movement. 
+
+@figure
+
+file:none
+width:10.0cm
+
+@answer
+
+m:1,10,1
+F:10,20,1
+correct:$F/$m
+minmax:auto,1
+
+@end
+
+
+

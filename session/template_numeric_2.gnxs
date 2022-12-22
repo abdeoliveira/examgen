@@ -1,0 +1,24 @@
+@config
+
+mode:numeric
+inline:8
+
+@question
+
+Consider the rectangle triangle of the figure below and knowing $\theta=@VAR(theta)^{\circ}$, determine $\phi$ \textbf{in rad}.
+
+@figure
+
+file:triangle.png
+width:5.0cm
+
+@answer
+
+theta:10,30
+correct:(90-$theta)*3.1415/180
+minmax:auto,3
+
+@end
+
+
+

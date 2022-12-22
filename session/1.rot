@@ -1,10 +1,3 @@
-metro_curva.gnxs
-particla_trilhos.gnxs
-rifle_alvo.gnxs
-10-65.gnxs
-objeto_para_momentaneamente.gnxs
-colisao_frontal.gnxs
-text_energia_potencial.gnxs
-11-66.gnxs
-pequena_aranha_elevador.gnxs
-duas_particulas_colisao.gnxs
+template_text_1.gnxs
+template_numeric_1.gnxs
+template_numeric_2.gnxs
