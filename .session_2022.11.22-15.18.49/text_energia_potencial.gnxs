@@ -1,0 +1,34 @@
+@config
+
+mode: text
+inline: 1
+
+@question
+
+Considere um corpo de massa $m$, sob a ação de um campo de forças $F$ conservativo, cuja energia mec\^anica \'e $E=K+U$, onde $K$ e $U$ s\~ao as energias cin\'etica e potencial. Considerando que o movimento do corpo é restrito a uma dimensão, pode-se afirmar que
+
+
+@figure
+
+file:none
+width:8.5cm
+
+@answer
+
+false: quando $K=0$, tem-se um ponto de equil\'{i}brio est\'avel.
+false: quando $U=0$, tem-se um ponto de equil\'{i}brio inst\'avel.
+false: se $U>E$, o sistema \'e dito ultras\^onico.
+false: se $dU/dx=0$ o sistema est\'a em repouso.
+true:  necessariamente $dE/dt=0$.
+true:  $F=-dU/dx$.
+false: se $F=0$ o sistema é dito anti-conservativo. 
+false: se $F=mg$ o sistema encontra-se em repouso ultra-móvel.
+false: se $K<0$ o sistema atinge o equilíbrio indiferente.
+false: $K=U$ apenas em pontos de retorno.
+false: $U>E$ é condição de flutuação mega dissonante.
+false: Todas as outras alternativas são falsas.
+
+@end
+
+
+

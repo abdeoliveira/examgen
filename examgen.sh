@@ -17,7 +17,12 @@ NOW=$(date +"%Y.%m.%d-%H.%M.%S")
 if [[ -d ./session ]];then
 	BUILD=$(cat ./session/build)
 	rm ./session/*.pdf && rm ./session/*.log && rm ./session/*.aux
-	mv session ./.session_$BUILD
+	if [[ $1 != 1 ]]; then
+        	mv session ./.session_$BUILD
+	else
+		rm -r session
+	fi
 fi
 cd ./src && ruby main.rb $NUM_EXAMS $NUM_ALTS $NOW && echo $NOW > ../session/build
 cd ../session && ./script && gio open output.pdf
+

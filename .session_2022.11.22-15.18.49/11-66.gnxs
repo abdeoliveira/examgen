@@ -1,0 +1,27 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Na figura abaixo, um pequeno bloco de @VAR(mbloco) g desliza para baixo em uma superfície curva sem atrito a partir de uma altura $h=@VAR(h)$ cm e depois adere a uma barra uniforme de massa @VAR(mbarra) g e comprimento @VAR(L) cm. A barra gira em torno do ponto O antes de parar  momentaneamente. Determine $\theta$ em graus.
+
+@figure
+
+file:fig1
+width:4.0cm
+
+@answer
+
+mbloco:50,100,0
+mbarra:100,200,0
+L:40,100,0
+h:10,30,0
+correct:(180.0/3.1415)*Math.acos(1-($h/$L)/((1+$mbarra/2/$mbloco)*(1+$mbarra/3/$mbloco)))
+minmax:1,45,1
+
+@end
+
+
+
