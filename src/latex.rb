@@ -3,7 +3,9 @@ class LATEX
 #===NEW EXAM - WRITE HEADER========
     
     def newdoc(output,examnumber,build)
-      header = File.read('../aux/header.tex')
+      ##LOCALE
+      header = File.read('../aux/header_en.tex')
+      #header = File.read('../aux/header_en.tex')
       header = header.sub('@EXAMID',examnumber)
       header = header.sub('@BUILD',build)
       File.write(output,header,mode:'w')
@@ -30,7 +32,8 @@ class LATEX
       alphabet=[*'(a)'..'(z)']
       nalts.times do |i|
         if mode=='numeric' 
-          alts[i]=alts[i].to_s.sub('.',',')
+          ###LOCALE
+          #alts[i]=alts[i].to_s.sub('.',',')
         end
         if (i+1)%inline!=0 
           alt = [alphabet[i],alts[i],"~","\n"].join 

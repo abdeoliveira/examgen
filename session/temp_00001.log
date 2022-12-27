@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (preloaded format=pdflatex 2022.10.29)  22 DEC 2022 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (preloaded format=pdflatex 2022.10.29)  27 DEC 2022 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -201,7 +201,7 @@ Package: cite 2015/02/27  v 5.5
 )
 
 Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 29.
+less on input line 27.
 
 (/usr/share/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2021/03/24 3.56 The Babel package
@@ -217,11 +217,14 @@ File: babel.def 2021/03/24 3.56 Babel common definitions
 )
 \bbl@dirlevel=\count270
 
-(/usr/share/texmf-dist/tex/generic/babel-portuges/brazil.ldf
-Language: portuges 2021/02/04 v1.2s Portuguese support from the babel system
-Package babel Info: \l@brazil = using hyphenrules for portuguese
-(babel)             (\language70) on input line 111.
-Package babel Info: Making " an active character on input line 143.
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 108.
 ))
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
@@ -235,20 +238,20 @@ LaTeX Warning: Unused global option(s):
 No file temp_00001.aux.
 \openout1 = `temp_00001.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count272
@@ -306,62 +309,62 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--63
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 <../input/figs/triangle.png, id=1, 946.53625pt x 722.7pt>
 File: ../input/figs/triangle.png Graphic file (type png)
 <use ../input/figs/triangle.png>
-Package pdftex.def Info: ../input/figs/triangle.png  used on input line 65.
+Package pdftex.def Info: ../input/figs/triangle.png  used on input line 49.
 (pdftex.def)             Requested size: 142.26378pt x 108.62086pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--71
+Underfull \hbox (badness 10000) in paragraph at lines 48--55
 
  []
 
 
-Overfull \hbox (6.59846pt too wide) detected at line 96
+Underfull \hbox (badness 10000) in paragraph at lines 56--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--69
+
+ []
+
+
+Overfull \hbox (11.59834pt too wide) detected at line 94
 []
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 <../aux/matricula.png, id=2, 460.72125pt x 423.5825pt>
 File: ../aux/matricula.png Graphic file (type png)
 <use ../aux/matricula.png>
-Package pdftex.def Info: ../aux/matricula.png  used on input line 98.
+Package pdftex.def Info: ../aux/matricula.png  used on input line 96.
 (pdftex.def)             Requested size: 170.71652pt x 156.94928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--99
+Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
  []
 
-
-Underfull \vbox (badness 1533) has occurred while \output is active []
-
- [1
+[1
 
 {/usr/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../input/figs/triang
 le.png> <../aux/matricula.png>] [2
 
 ] (./temp_00001.aux) ) 
 Here is how much of TeX's memory you used:
- 4278 strings out of 478994
- 56467 string characters out of 5864718
- 401219 words of memory out of 5000000
- 21727 multiletter control sequences out of 15000+600000
+ 4253 strings out of 478994
+ 56163 string characters out of 5864718
+ 400592 words of memory out of 5000000
+ 21702 multiletter control sequences out of 15000+600000
  406963 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,74p,227b,208s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,11n,74p,227b,206s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-
 t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dis
@@ -372,7 +375,7 @@ usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf
 -dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-su
 per/sfrm1000.pfb>
-Output written on temp_00001.pdf (2 pages, 242815 bytes).
+Output written on temp_00001.pdf (2 pages, 246057 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream

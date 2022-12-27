@@ -30,8 +30,10 @@ class NUMERICALTS
             okdig=d
         end
 #=========SUBSTITUTE NUMERIC VARIABLES INTO QUESTION==========    
-    variables.each do |v|
-      x = subvar[v[0]].to_s.sub('.',',')
+###LOCALE
+      variables.each do |v|
+      x = subvar[v[0]].to_s
+      #x=x.sub('.',',')
       s = ['@VAR(',v[0],')'].join
       q = q.sub(s,x)
     end

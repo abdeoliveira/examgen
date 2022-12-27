@@ -48,16 +48,15 @@ From now on, I will assume `~` as being the cloned repo folder, i.e., `cd examge
 
 ## Language and localization
 
-Despite the docs and comments through the codes are in English, the LaTex header was conceived to work with the pt_br (Brazilian Portuguese) locale as follows:
+Despite the docs and comments through the codes are in English, the default localization of this project is the Brazilian Portuguese. Thus the defaults are as follows:
 
 * Words are separated according to the Portuguese language.
 * Comma is used as decimal separator (instead of point as used in English).
 
-If you want to localize your text to other language, you must edit the file `~/aux/header.tex` in two lines. 
-The first is indeed the first line, which reads `\documentclass[9pt,twocolumn,brazil]{article}`,
-in which you can change `brazil` to whatever you want.
+If you want to localize the exams to the English language you must create a blank file named (exactly) `locale_en` inside the `~/input` folder. Simple like that.
 
-The second place is the line ```\mathcode`,="002C```. Commenting this line, i.e. putting a `%` in front of it,  makes LaTex to use 'point' instead of 'comma' for decimal separator.  
+I intend to implement other localizations in the future. If you want to tweak the code and do it for yourself, please contact me for help if needed.
+
 
 ## Exam Header
 
@@ -66,7 +65,7 @@ xxx
 
 ## Creating questions
 
-You need to create exam questions in a specific format, necessarily with `.gnxs` extension.  
+You need to create exam questions in a specific format, necessarily with `.gnxs` extension. You may want to take a look in example files in the `~/input` folder while reading the next section. 
 
 Question files must have 4 blocks, which are `@config`, `@question`, `@figure`, and `@answer`, and must terminate with `@end`.
 
