@@ -53,7 +53,7 @@ class LATEX
       File.write(output,formulas,mode:'a')
     end
 
-#==========WRITE MATRICULA EXAMPLE (IMAGE)=======
+#==========WRITE STUDENT ID EXAMPLE (IMAGE)=======
 
     def printmatriculaimage(output)
       image='../aux/matricula.png'
