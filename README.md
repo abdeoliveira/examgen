@@ -91,16 +91,19 @@ and I recommend `inline:1` for `mode:text`
 Check screenshots with the `inline:` variable in action. 
 
 **inline:1**
+
 ![alt text](screenshots/inline-1.png "inline:1")
 
 -----
 
 **inline:2**
+
 ![alt text](screenshots/inline-2.png "inline:2")
 
 -----
 
 **inline:8** [Note the code handles the case in which there are fewer alternatives, 5, than inline: argument, 8]
+
 ![alt text](screenshots/inline-5.png "inline:8")
 
 -----
