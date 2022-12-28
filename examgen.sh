@@ -2,7 +2,7 @@
 #================================
 NUM_EXAMS=$1
 NUM_ALTS=5
-#export EXAMGEN_LOCALE='pt_br' 
+#export EXAMGEN_LOCALE='ptbr' 
 #================================
 set -e
 

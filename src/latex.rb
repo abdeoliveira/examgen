@@ -3,9 +3,9 @@ class LATEX
 #===NEW EXAM - WRITE HEADER========
     
     def newdoc(output,examnumber,build)
-      ##LOCALE
+      ###LOCALE
       header = File.read('../aux/header_en.tex')
-      if ENV['EXAMGEN_LOCALE']=='pt_br' then header = File.read('../aux/header.tex') end
+      if ENV['EXAMGEN_LOCALE']=='ptbr' then header = File.read('../aux/header_ptbr.tex') end
       header = header.sub('@EXAMID',examnumber)
       header = header.sub('@BUILD',build)
       File.write(output,header,mode:'w')
@@ -33,7 +33,7 @@ class LATEX
       nalts.times do |i|
         if mode=='numeric' 
           ###LOCALE
-          if ENV['EXAMGEN_LOCALE']=='pt_br' then alts[i]=alts[i].to_s.sub('.',',') end
+          if ENV['EXAMGEN_LOCALE']=='ptbr' then alts[i]=alts[i].to_s.sub('.',',') end
         end
         if (i+1)%inline!=0 
           alt = [alphabet[i],alts[i],"~","\n"].join 
@@ -55,17 +55,21 @@ class LATEX
 
 #==========WRITE STUDENT ID EXAMPLE (IMAGE)=======
 
-    def printmatriculaimage(output)
-      image='../aux/matricula.png'
-      include_image="\\\includegraphics[width=6cm]{#{image}}\\\\\n"
+    def printstuidimage(output)
+      ###LOCALE
+      image='../aux/studentidimage_en.png'
+      if ENV['EXAMGEN_LOCALE']=='ptbr' then image='../aux/studentidimage_ptbr.png' end
+      include_image="\\\includegraphics[width=7cm]{#{image}}\\\\\n"
       File.write(output,include_image,mode:'a')
     end
 
-#===WRITE STUDENT INFORMATION (TEXT)==
+#=======WRITE STUDENT ID INFORMATION (TEXT)==
 
-    def printmatriculatext(output)
-      textmatricula = File.read('../aux/text-matricula.tex')
-      File.write(output,textmatricula,mode:'a')
+    def printstuidtext(output)
+      ###LOCALE
+      textstuid = File.read('../aux/studentidtext_en.tex')
+      if ENV['EXAMGEN_LOCALE']=='ptbr' then textstuid = File.read('../aux/studentidtext_ptbr.tex') end
+      File.write(output,textstuid,mode:'a')
     end
 
 #====PAGEBREAK=====================

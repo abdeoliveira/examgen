@@ -30,10 +30,10 @@ class NUMERICALTS
             okdig=d
         end
 #=========SUBSTITUTE NUMERIC VARIABLES INTO QUESTION==========    
-###LOCALE
+      ###LOCALE
       variables.each do |v|
       x = subvar[v[0]].to_s
-      if ENV['EXAMGEN_LOCALE']=='pt_br' then x=x.sub('.',',') end
+      if ENV['EXAMGEN_LOCALE']=='ptbr' then x=x.sub('.',',') end
       s = ['@VAR(',v[0],')'].join
       q = q.sub(s,x)
     end

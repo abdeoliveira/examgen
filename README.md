@@ -50,10 +50,11 @@ From now on, I will assume `~` as being the cloned repo folder, i.e., `cd examge
 
 ### English
 
-The localization of this project is into English. Thus the defaults are as follows:
+The localization for project is into English. Thus the defaults are as follows:
 
 * Words are separated according to the English language.
-* `.` is used as decimal separator.
+* `.` is used as decimal numbers separator.
+* The texts in Form are written in English.
 
 ### Brazilian Portuguese
 
@@ -90,19 +91,19 @@ and I recommend `inline:1` for `mode:text`
 
 Check screenshots with the `inline:` variable in action. 
 
-**inline:1** [This is a typical question in `mode:text`. Note that `inline:1` renders a nice visual for such a case.]
+**inline:1** [This is a typical question in `mode:text`. Note that `inline:1` renders a nice visual for such `mode:text` questions.]
 
 ![alt text](screenshots/inline-1.png "inline:1")
 
 -----
 
-**inline:2** [Here we have `mode:numeric`. Note that `inline:2` won't display a great layout.]
+**inline:2** [Here we have `mode:numeric`. Note that `inline:2` won't display a great layout for this specific case.]
 
 ![alt text](screenshots/inline-2.png "inline:2")
 
 -----
 
-**inline:8** [Again `mode:numeric`. Note the code handles the case in which there are fewer alternatives, 5, than `inline:` argument, 8]
+**inline:8** [Again `mode:numeric`. My recommendation is `inline:8` for a two-columns document with number of alternatives less or equal to 8.]
 
 ![alt text](screenshots/inline-5.png "inline:8")
 

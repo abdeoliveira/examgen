@@ -98,10 +98,10 @@ num_exams.times do |j|
 #===========CLOSE DOCUMENT #j===============================
   
   latex.printformulas(output)
-  latex.printmatriculaimage(output)
+  latex.printstuidimage(output)
   latex.pagebreak(output)
   FORM.new(q_in_line,num_exams,nalts,num_quests,output,j) #Print Form for students answers and ID
-  latex.printmatriculatext(output)
+  latex.printstuidtext(output)
   latex.closedoc(output)
 
 end  

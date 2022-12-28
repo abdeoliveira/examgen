@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (preloaded format=pdflatex 2022.10.29)  28 DEC 2022 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (preloaded format=pdflatex 2022.12.28)  28 DEC 2022 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -338,11 +338,11 @@ Overfull \hbox (11.59834pt too wide) detected at line 94
 []
  []
 
-<../aux/matricula.png, id=2, 460.72125pt x 423.5825pt>
-File: ../aux/matricula.png Graphic file (type png)
-<use ../aux/matricula.png>
-Package pdftex.def Info: ../aux/matricula.png  used on input line 96.
-(pdftex.def)             Requested size: 170.71652pt x 156.94928pt.
+<../aux/studentidimage_en.png, id=2, 939.51pt x 696.6025pt>
+File: ../aux/studentidimage_en.png Graphic file (type png)
+<use ../aux/studentidimage_en.png>
+Package pdftex.def Info: ../aux/studentidimage_en.png  used on input line 96.
+(pdftex.def)             Requested size: 199.16928pt x 147.67264pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
@@ -351,12 +351,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--97
 [1
 
 {/usr/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../input/figs/triang
-le.png> <../aux/matricula.png>] [2
+le.png> <../aux/studentidimage_en.png>] [2
 
 ] (./temp_00001.aux) ) 
 Here is how much of TeX's memory you used:
  4253 strings out of 478994
- 56163 string characters out of 5864718
+ 56211 string characters out of 5864718
  400592 words of memory out of 5000000
  21702 multiletter control sequences out of 15000+600000
  406963 words of font info for 33 fonts, out of 8000000 for 9000
@@ -372,10 +372,10 @@ usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf
 -dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-su
 per/sfrm1000.pfb>
-Output written on temp_00001.pdf (2 pages, 245785 bytes).
+Output written on temp_00001.pdf (2 pages, 222876 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -41,7 +41,9 @@ class FORM
  
 #---BUILD EXAM ID CODE---
       i = exam_number
-      examid = File.read('../aux/examid.tex')
+      ###LOCALE
+      examid = File.read('../aux/examid_en.tex')
+      if ENV['EXAMGEN_LOCALE']=='ptbr' then examid = File.read('../aux/examid_ptbr.tex') end
       var = examid.scan(/(@D.\d.\d+)/)
       digs = (i+1).digits
       numd = digs.count
@@ -80,7 +82,7 @@ class FORM
  
     File.write(file,examid,mode:'a')
  
- #-----PRINT GABARITO TABLE------------
+ #-----PRINT ANSWERS TABLE------------
     hl = "\\hline\n"
     factor.times do |j| 
       qb = [quest_block[j],"\n"].join
@@ -93,9 +95,11 @@ class FORM
         end
     end   
 
-#------------PRINT MATRICULA--------------
-    matricula = File.read('../aux/matricula.tex')
-    File.write(file,matricula,mode:'a')
+#------------PRINT STUDENT ID TABLE--------------
+    ### LOCALE
+    stuid = File.read('../aux/studentid_en.tex') 
+    if ENV['EXAMGEN_LOCALE']=='ptbr' then stuid = File.read('../aux/studentid_ptbr.tex') end
+    File.write(file,stuid,mode:'a')
 
   end
 end
