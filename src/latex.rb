@@ -5,7 +5,7 @@ class LATEX
     def newdoc(output,examnumber,build)
       ##LOCALE
       header = File.read('../aux/header_en.tex')
-      #header = File.read('../aux/header_en.tex')
+      if ENV['EXAMGEN_LOCALE']=='pt_br' then header = File.read('../aux/header.tex') end
       header = header.sub('@EXAMID',examnumber)
       header = header.sub('@BUILD',build)
       File.write(output,header,mode:'w')
@@ -33,7 +33,7 @@ class LATEX
       nalts.times do |i|
         if mode=='numeric' 
           ###LOCALE
-          #alts[i]=alts[i].to_s.sub('.',',')
+          if ENV['EXAMGEN_LOCALE']=='pt_br' then alts[i]=alts[i].to_s.sub('.',',') end
         end
         if (i+1)%inline!=0 
           alt = [alphabet[i],alts[i],"~","\n"].join 

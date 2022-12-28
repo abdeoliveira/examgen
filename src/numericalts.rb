@@ -33,7 +33,7 @@ class NUMERICALTS
 ###LOCALE
       variables.each do |v|
       x = subvar[v[0]].to_s
-      #x=x.sub('.',',')
+      if ENV['EXAMGEN_LOCALE']=='pt_br' then x=x.sub('.',',') end
       s = ['@VAR(',v[0],')'].join
       q = q.sub(s,x)
     end
