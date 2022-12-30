@@ -1,3 +1,4 @@
 pdflatex temp_00001.tex
+pdflatex temp_00002.tex
 pdfunite temp_*pdf output.pdf
 cp ../input/*.gnxs .
