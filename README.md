@@ -48,18 +48,16 @@ From now on, I will assume `~` as being the cloned repo folder, i.e., `cd examge
 
 ## Language and localization
 
-### English
+### English 
 
-The localization for project is into English. Thus the defaults are as follows:
+This is the default.
 
-* Words are separated according to the English language.
-* `.` is used as decimal numbers separator.
-* The texts in Form are written in English.
 
 ### Brazilian Portuguese
 
-Alternatively, I have implemented a localization into Brazilian Portuguese, which handles words separation as well as uses `,` as decimal separator.
-To use it, you must uncomment the line `export EXAMGEN_LOCALE='pt_br'` in `~/examgen.sh` script.
+Alternatively, I have implemented a localization into Brazilian Portuguese.
+To use it, you must uncomment the line `export EXAMGEN_LOCALE='pt_br'` 
+in the `~/examgen.sh` script.
 
 ### Other languages
 

@@ -49,7 +49,20 @@ class LATEX
 #=========WRITE FORMULAS==========
 
     def printformulas(output)
-      formulas = File.read('../aux/formulas.tex')
+      inputfile = '../input/formulas'
+      formulas = File.read('../aux/skel_formulas.tex')
+      if File.exist?(inputfile) then
+        File.readlines(inputfile).each_with_index do |line,index|
+          if index==0
+            formulas.sub!('@TITLE',line.strip)
+          else 
+            line =  '&' + line.strip + '&\\\\\\'
+            formulas.sub!('%@ENTRY',line+"\n%@ENTRY")
+          end
+        end
+      else
+        formulas = " "
+      end
       File.write(output,formulas,mode:'a')
     end
 
