@@ -56,7 +56,7 @@ This is the default.
 ### Brazilian Portuguese
 
 Alternatively, I have implemented a localization into Brazilian Portuguese.
-To use it, you must uncomment the line `export EXAMGEN_LOCALE='pt_br'` 
+To use it, you must uncomment the line `export EXAMGEN_LOCALE='ptbr'` 
 in the `~/examgen.sh` script.
 
 ### Other languages
