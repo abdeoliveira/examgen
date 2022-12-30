@@ -66,7 +66,9 @@ I intend to implement other localizations in the future. If you want to tweak th
 
 ## Exam Header
 
-xxx
+![alt text](screenshots/header.png "Exam Header")
+
+You must edit `~/aux/header_<lang>.tex`, where `<lang>` corresponds to your languade code, in order to accomodate your needs.
 
 
 ## Creating questions
