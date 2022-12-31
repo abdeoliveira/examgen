@@ -22,7 +22,7 @@ class JANITOR
       end
     #--------------------------
      cmd1 = "pdfunite temp_*pdf output.pdf\n"
-     cmd2 = "cp ../input/*.gnxs .\n"
+     cmd2 = "cp ../input/questions/*.gnxs .\n"
      File.write(file,cmd1,mode:'a')
      File.write(file,cmd2,mode:'a')
     `chmod +x #{file}`

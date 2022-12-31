@@ -1,9 +1,16 @@
 class FORM
 
   def initialize(questions_in_line,numberofexams,naltern,noq,file,exam_number)
-    if questions_in_line != 10 then raise "ERROR: CURRENTLY ONLY questions_in_line=10 (see forms.rb) IS ACCEPTBLE" end
+    if questions_in_line != 10 then raise "ERROR(form.rb): CURRENTLY ONLY questions_in_line=10 IS ACCEPTBLE" end
 
 #===============================================
+  examid = File.read('../aux/examid.tex')
+  stuid  = File.read('../aux/studentid.tex')
+  form = File.read('../input/config/markform').split(',').to_a
+  examid.sub!('@RESERVED',form[0].strip)
+  examid.sub!('@ANSWERS',form[1].strip)
+  stuid.sub!('@STUDENTID',form[2].strip)
+
   total_digs = numberofexams.digits.count
 
   factor = (noq.to_f/questions_in_line).ceil
@@ -41,9 +48,6 @@ class FORM
  
 #---BUILD EXAM ID CODE---
       i = exam_number
-      ###LOCALE
-      examid = File.read('../aux/examid_en.tex')
-      if ENV['EXAMGEN_LOCALE']=='ptbr' then examid = File.read('../aux/examid_ptbr.tex') end
       var = examid.scan(/(@D.\d.\d+)/)
       digs = (i+1).digits
       numd = digs.count
@@ -95,11 +99,8 @@ class FORM
         end
     end   
 
-#------------PRINT STUDENT ID TABLE--------------
-    ### LOCALE
-    stuid = File.read('../aux/studentid_en.tex') 
-    if ENV['EXAMGEN_LOCALE']=='ptbr' then stuid = File.read('../aux/studentid_ptbr.tex') end
+#------------PRINT STUDENT ID TABLE-------
     File.write(file,stuid,mode:'a')
-
+#-----------------------------------------  
   end
 end

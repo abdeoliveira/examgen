@@ -72,7 +72,7 @@ I intend to implement other localizations in the future. If you want to tweak th
 
 ![alt text](screenshots/header.png "Exam Header")
 
-You must edit `~/aux/header_<lang>.tex`, where `<lang>` corresponds to choosen languade code, in order to accomodate your needs.
+You must edit `~/aux/header_<lang>.tex`, where `<lang>` is the languade code, in order to accomodate your needs.
 
 
 ## Creating questions

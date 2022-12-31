@@ -22,7 +22,7 @@ janitor = JANITOR.new
 
 #============SCAN FOR GNXS FILES=======================
 
-files = Dir['../input/*.gnxs']
+files = Dir['../input/questions/*.gnxs']
 num_quests = files.length
 
 #===========CHECK FOR CODE'S LIMITATIONS==============

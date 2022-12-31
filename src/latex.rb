@@ -3,11 +3,16 @@ class LATEX
 #===NEW EXAM - WRITE HEADER========
     
     def newdoc(output,examnumber,build)
-      ###LOCALE
-      header = File.read('../aux/header_en.tex')
-      if ENV['EXAMGEN_LOCALE']=='ptbr' then header = File.read('../aux/header_ptbr.tex') end
-      header = header.sub('@EXAMID',examnumber)
-      header = header.sub('@BUILD',build)
+      config_header = File.read('../input/config/header')
+      lang = File.read('../input/config/lang').split(',').to_a
+      decimal = " "
+      if lang[1].strip == 'comma' then decimal = '\mathcode`,="002C' end
+      header = File.read('../aux/header.tex')
+      header.sub!('@LANG',lang[0].strip)
+      header.sub!('@DECIMAL',decimal)
+      header.sub!('@HEADER',config_header)
+      header.sub!('@EXAMID',examnumber)
+      header.sub!('@BUILD',build)
       File.write(output,header,mode:'w')
     end
 
@@ -32,8 +37,8 @@ class LATEX
       alphabet=[*'(a)'..'(z)']
       nalts.times do |i|
         if mode=='numeric' 
-          ###LOCALE
-          if ENV['EXAMGEN_LOCALE']=='ptbr' then alts[i]=alts[i].to_s.sub('.',',') end
+          lang = File.read('../input/config/lang').split(',')[1].strip
+          if lang=='comma' then alts[i]=alts[i].to_s.sub('.',',') end
         end
         if (i+1)%inline!=0 
           alt = [alphabet[i],alts[i],"~","\n"].join 
@@ -49,8 +54,8 @@ class LATEX
 #=========WRITE FORMULAS==========
 
     def printformulas(output)
-      inputfile = '../input/formulas'
-      formulas = File.read('../aux/skel_formulas.tex')
+      inputfile = '../input/config/formulas'
+      formulas = File.read('../aux/formulas.tex')
       if File.exist?(inputfile) then
         File.readlines(inputfile).each_with_index do |line,index|
           if index==0
@@ -69,19 +74,20 @@ class LATEX
 #==========WRITE STUDENT ID EXAMPLE (IMAGE)=======
 
     def printstuidimage(output)
-      ###LOCALE
-      image='../aux/studentidimage_en.png'
-      if ENV['EXAMGEN_LOCALE']=='ptbr' then image='../aux/studentidimage_ptbr.png' end
-      include_image="\\\includegraphics[width=7cm]{#{image}}\\\\\n"
+      image='../aux/studentidimage.png'
+      example = File.read('../input/config/markform').split(',')[5].strip
+      include_image=File.read('../aux/studentimage.tex')
+      include_image.sub!('@EXAMPLE',example+':')
       File.write(output,include_image,mode:'a')
     end
 
-#=======WRITE STUDENT ID INFORMATION (TEXT)==
+#=======WRITE STUDENT NAME AND ID (TEXT)==
 
     def printstuidtext(output)
-      ###LOCALE
-      textstuid = File.read('../aux/studentidtext_en.tex')
-      if ENV['EXAMGEN_LOCALE']=='ptbr' then textstuid = File.read('../aux/studentidtext_ptbr.tex') end
+      textstuid = File.read('../aux/studentidtext.tex')
+      markform = File.read('../input/config/markform').split(',').to_a
+      textstuid.sub!('@NAME',markform[3].strip+':')
+      textstuid.sub!('@STUID',markform[4].strip+':')
       File.write(output,textstuid,mode:'a')
     end
 
