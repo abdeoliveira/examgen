@@ -27,7 +27,7 @@ will solve the aforementioned dependencies. For other distros, please check dist
 
 # Usage
 
-## Quick Start
+## Quick Result
 
 If you are in a hurry, and want a quick result, do as follows:
 
@@ -37,6 +37,10 @@ If you are in a hurry, and want a quick result, do as follows:
 4. Run `./examgen.sh 1`
 
 If everything went well a PDF will be opened in your screen containing one sample exam.  
+
+## Quick Start
+
+Must write it...
 
 ## Manual
 
@@ -68,7 +72,7 @@ I intend to implement other localizations in the future. If you want to tweak th
 
 ![alt text](screenshots/header.png "Exam Header")
 
-You must edit `~/aux/header_<lang>.tex`, where `<lang>` corresponds to your languade code, in order to accomodate your needs.
+You must edit `~/aux/header_<lang>.tex`, where `<lang>` corresponds to choosen languade code, in order to accomodate your needs.
 
 
 ## Creating questions
