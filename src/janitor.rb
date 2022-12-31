@@ -17,7 +17,7 @@ class JANITOR
     File.write(file,'',mode:'w')
     numexams.times do |i|
       jj = exam_index[i]
-      cmd = "pdflatex temp_#{jj}.tex\n"
+      cmd = "pdflatex temp_#{jj}.tex >> /tmp/examgen-latex.log\n"
       File.write(file,cmd,mode:'a')
       end
     #--------------------------

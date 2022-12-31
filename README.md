@@ -44,7 +44,7 @@ xxx
 
 ## Manual
 
-First, you need to clone this repo (this is the jargon for donwload this whole git project). For doing that you need to have [git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on your machine. 
+First, you need to clone this repo (this is the jargon for donwloading a git project). For doing that you need to have [git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on your machine. 
 
 Once you have git, cast `git clone https://github.com/abdeoliveira/examgen`
 
