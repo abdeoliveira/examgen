@@ -119,7 +119,8 @@ inline:2
 
 @question
 
-A particle of mass @VAR(m) kg is subject to an external force of @VAR(F) N. Calculate the acceleration in m/s$^2$ in a one-dimensional movement. 
+A particle of mass @VAR(m) kg is subject to an external force of @VAR(F) N. 
+Calculate the acceleration in m/s$^2$ in a one-dimensional movement. 
 
 @figure
 
@@ -135,13 +136,31 @@ minmax:auto,1
 
 @end
 ```
-Note we have `@VAR(m)` and `@VAR(F)` in the `@question` block, which are correlated to `m:1,10,2` and `F:10,20,1` in the `@answer` block. 
+Here we have `@VAR(m)` and `@VAR(F)` in the `@question` block, which are correlated to `m:1,10,2` and `F:10,20,1` in the `@answer` block (more about
+such a block can be found below).
+
 In this example, the final document will have `m` randomly replaced by a number between `1` and `10` (closed interval) having `2` decimal digits. 
 For example, `m` can be `1.43`, `5.40`, `7.21`, `10.00`, and so on.  
-As you probably have already antecipated, `F` will be replaced by a number between `10` and `20` with `1` decimal digit. 
+As you probably have already antecipated, `F` will be replaced by a random number between `10` and `20` with `1` decimal digit. 
 
+#### The `@figure` block
 
+Contains two variables, which are `file:` and `width:`. The former expects a figure name as argument, if any. 
+If there is no figure in the question, the argument must be `none`. The later expects the figure width as argument, if any. 
+If `file:none` then `width:` argument is ignored (although `width:` *must* be present).
 
+File figures must be located in the `~/input/figs` folder. My setup works well with the `png` format but you can use any one suitable to 
+by `LaTex`.
+
+#### The `@answer` block
+
+This block must have N+2 lines, where N is the number of `@VAR()` functions used in the `@question` block. Each line is expected to have the 
+following format: `a:b,c,i`. 
+
+* `a` must be associated to a `@VAR(a)` in `@question` block.
+* `b` is an integer or real number, the lower limit of the interval (closed)
+* `c` is an integer or real number, the upper limit of the interval (closed)
+* `i` is an integer, and stands for the number of decimal places of `a`.
 
 
 
