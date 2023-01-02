@@ -109,9 +109,9 @@ Check screenshots with the `inline:` variable in action.
 #### The `@question` block
 
 The only entry is a text following [LaTex](https://www.latex-project.org/) format. Thus equations, bolds, italics, colors and so on, will all follow LaTex format.  
-**Note:** If the question is in `mode:numeric` then you will have to deal with the `@VAR()` function in the `@question` block . The `@VAR()` function correlates a variable 
-to a user-defined number interval. Such an interval is defined in the `@answer` block. Check the example below. 
 
+**Note:** If the question is in `mode:numeric` then you will have to deal with the `@VAR()` function. The `@VAR()` function correlates a variable 
+to a random number belonging to a user-defined number interval. Such an interval is defined in the `@answer` block. Check the example below. 
 ```@config
 
 mode:numeric
@@ -135,8 +135,7 @@ minmax:auto,1
 
 @end
 ```
-
-Note we have `@VAR(m)` and `@VAR(F)` in the `@question` block, which are correlated to `m:1,10,2` and `F:10,20,1` in the `@answers` block. 
+Note we have `@VAR(m)` and `@VAR(F)` in the `@question` block, which are correlated to `m:1,10,2` and `F:10,20,1` in the `@answer` block. 
 In this example, the final document will have `m` randomly replaced by a number between `1` and `10` (closed interval) having `2` decimal digits. 
 For example, `m` can be `1.43`, `5.40`, `7.21`, `10.00`, and so on.  
 As you probably have already antecipated, `F` will be replaced by a number between `10` and `20` with `1` decimal digit. 
