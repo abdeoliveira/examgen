@@ -154,13 +154,23 @@ by `LaTex`.
 
 #### The `@answer` block
 
-This block must have N+2 lines, where N is the number of `@VAR()` functions used in the `@question` block. Each line is expected to have the 
-following format: `a:b,c,i`. 
+This block must have N+2 lines, where N is the number of `@VAR()` functions used in the `@question` block. Each one of the N lines is expected to have the 
+following format: `a:b,c,i`, where:
 
-* `a` must be associated to a `@VAR(a)` in `@question` block.
+* `a` must be associated to a `@VAR(a)` function, present in the `@question` block.
 * `b` is an integer or real number, the lower limit of the interval (closed)
 * `c` is an integer or real number, the upper limit of the interval (closed)
 * `i` is an integer, and stands for the number of decimal places of `a`.
 
+The last two lines are `correct:` and `minmax:`. 
+
+* `correct:` has the equation for the correct answer and must be composed by the previously defined N variables. 
+*Note:* Here each variable must be prepended by the `$` symbol. For example, supposed the answer for a given question is calculated by the formula `F/m` 
+(borrowing our previous example). Then the line must be `correct:$F/$m`.
+
+* `minmax:` Defines the interval used to sample numbers to compose the wrong alternatives. It
+expects either `auto,i` or `a,b,i` as arguments. `a` and `b` may be integer of real numbers and `i` is an integer.
+If `auto` is used then the program will try to guess a reasonble interval for sampling numbers. `i` is the number
+of decimal digits. If `a` and `b` are used then the program will respect such a user-defined interval.
 
 
