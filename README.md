@@ -56,11 +56,11 @@ The only files you must edit lie inside the `~/input/config` folder. They are `f
 
 * `formulas`: This is an OPTIONAL file. If present, it must have N+1 lines, where the first one is a title (as for example, `Formulas` or `Formulas and Constants`) and followed by N lines consisting of equations which you want to provide to students during the test. Equations must follow the `LaTex` format WITHOUT the symbol `$`.
 
-* `header`: This is and OPTIONAL file. If present, it is intented to contain information regarding the School/College/University, Professor, Exam, Date, and whatever information the professor/teacher may find relevant to figure out in the exam header. It must follows the `LaTex` format. Despite it is optional, as stated before, I particularly think it is important to have one.
+* `header`: This is an OPTIONAL file. If present, it is intented to contain information regarding the School/College/University, Professor, Exam, Date, and whatever information the professor/teacher may find relevant to figure out in the exam header. It must follows the `LaTex` format. Despite it is optional, as stated before, I particularly think it is important to have one.
 
-* `lang`: It is a MUST HAVE file. It must contain a single line with two words separated by a comma as follows: `word1,word2`. `word1` must be related to the language used in in your document (`english` for instance). `word2` must be either `point` or `comma` and it stands for the symbol used for decimal separation. For example, the number `1/2` is represented as `1.5` if `point` is used whereas it is `1,5` if `comma` was choosen.
+* `lang`: It is a MUST HAVE file. It must contain a single line with two words separated by a comma as follows: `word1,word2`. `word1` must be related to the language used in in your document (`english` for instance). `word2` must be either `point` or `comma` and it stands for the symbol used for decimal separation. For example, the number `3/2` is represented as `1.5` if `point` is used whereas it is `1,5` if `comma` was choosen.
 
-* `markform`: A MUST HAVE file containing six words separated by comma. Each word will appear in a different part of the document. See the image below for details.
+* `markform`: A MUST HAVE file containing six words separated by comma. Each word will appear in a different part of the document. See the images below for details.
 
 ![alt text](screenshots/words-markform-1.png)
 
