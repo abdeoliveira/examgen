@@ -111,6 +111,29 @@ Check screenshots with the `inline:` variable in action.
 The only entry is a text following [LaTex](https://www.latex-project.org/) format. Thus equations, bolds, italics, colors and so on, will all follow LaTex format.  
 **Note:** If the question is in `mode:numeric` then you will have to deal with the `@VAR()` function in the `@question` block . Better than spending my whole [Mana](https://en.wikipedia.org/wiki/Magic_(game_terminology)) trying to explain the `@VAR()` function, I prefer to give a couple of examples of its usage.  
 
+* The `@VAR()` function correlates a variable to a user-defined number interval. Such an interval is defined in the `@answer` block (to be approached later). Check this example: 
 
+```@config
 
+mode:numeric
+inline:2
+
+@question
+
+A particle of mass @VAR(m) kg is subject to an external force of @VAR(F) N. Calculate the acceleration in m/s$^2$ in a one-dimensional movement. 
+
+@figure
+
+file:none
+width:10.0cm
+
+@answer
+
+m:1,10,1
+F:10,20,1
+correct:$F/$m
+minmax:auto,1
+
+@end
+```
 
