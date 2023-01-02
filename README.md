@@ -177,11 +177,11 @@ of decimal digits. If `a` and `b` are used then the program will respect such a 
 
 1. Ensure `~/examgen.sh` is executable by doing `chmod +x ~/examgen.sh`.
 
-2. Run `./~/examgen.sh i`, where `i` is the number of exams to be generated.
-The script can alternatively be run as `./~/examgen.sh i j`, where `j` is the number of alternatives for each question. 
+2. Run `cd ~ && ./examgen.sh i`, where `i` is the number of exams to be generated.
+The script can alternatively be run as `./examgen.sh i j`, where `j` is the number of alternatives for each question. 
 If `j` is absent, then `j=5` will be used by default, i.e., questions will have `(a) ... (e)` alternatives.
 
-3. After running `~/examgen.sh`, if everything was fine, a single PDF document containing `i` exams will be opened in your screen. The actual file is `~/session/output.pdf`.
+3. After running `./examgen.sh`, if everything was fine, a single PDF document containing `i` exams will be opened in your screen. The actual file is `~/session/output.pdf`.
 
 4. Each exam is stamped (bottom right of each page) with a code like `i/yyyy.mm.dd-hh.MM.ss`, standing for `exam_number/year.month.day-hour.minute.second`.
 
@@ -193,7 +193,7 @@ spread all over the place can be a cumbersome task. Thus every time `~/examgen.s
 `~/session` is sanitazed before saving in order to minimize the used space. Thus only the necessary files to perform exam correction are kept along with `.tex` files in case
 you need to regenerate any PDF (you will the need files inside `~/input` for that).
 
-6. Regarding the point above, `~/session` *IS NOT* saved if `i=1`, i.e., if you run `./~/examgen.sh 1`.
+6. Regarding the point above, `~/session` *IS NOT* saved if `i=1`, i.e., if you run `./examgen.sh 1`.
 
 7. Ask students to write their name and ID number in the very end of the exam (in the corresponding fiels). This is important to eventually identify missing exams for any reason. 
 
