@@ -3,14 +3,16 @@ class LATEX
 #===NEW EXAM - WRITE HEADER========
     
     def newdoc(output,examnumber,build)
-      config_header = File.read('../input/config/header')
+      header = File.read('../aux/header.tex')
+      if File.exist? '../input/config/header' 
+        config_header = File.read('../input/config/header')
+        header.sub!('%@HEADER',config_header)
+      end
       lang = File.read('../input/config/lang').split(',').to_a
       decimal = " "
       if lang[1].strip == 'comma' then decimal = '\mathcode`,="002C' end
-      header = File.read('../aux/header.tex')
       header.sub!('@LANG',lang[0].strip)
       header.sub!('@DECIMAL',decimal)
-      header.sub!('@HEADER',config_header)
       header.sub!('@EXAMID',examnumber)
       header.sub!('@BUILD',build)
       File.write(output,header,mode:'w')
