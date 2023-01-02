@@ -181,7 +181,7 @@ of decimal digits. If `a` and `b` are used then the program will respect such a 
 The script can alternatively be run as `./~/examgen.sh i j`, where `j` is the number of alternatives for each question. 
 If `j` is absent, then `j=5` will be used by default, i.e., questions will have `(a) ... (e)` alternatives.
 
-3. After running `~/examgen.sh`, if everything were fine, a single PDF document containing `i` exams will be opened in your screen. The actual file is `~/session/output.pdf`.
+3. After running `~/examgen.sh`, if everything was fine, a single PDF document containing `i` exams will be opened in your screen. The actual file is `~/session/output.pdf`.
 
 4. Each exam is stamped (bottom right of each page) with a code like `i/yyyy.mm.dd-hh.MM.ss`, standing for `exam_number/year.month.day-hour.minute.second`.
 
@@ -189,9 +189,11 @@ If `j` is absent, then `j=5` will be used by default, i.e., questions will have 
 deletion of this folder there is no way to use the `correction.rb` program to automatically  correct the exams. For few exams (a dozen or so) 
 this is not a big deal. On the other hand, for a hundred exams the correction involving shuffled questions and alternatives, and also random numbers
 spread all over the place can be a cumbersome task. Thus every time `~/examgen.sh` is run the `~/session` folder is saved as a hidden folder as
-`~/.session_yyy.mm.dd-hh.MM.ss`. This way you are able to correlate any generated PDF with the folder containg the files necessary for correction. 
+`~/.session_yyyy.mm.dd-hh.MM.ss`. This way you are able to correlate any generated PDF with the folder containg the files necessary for correction. 
 `~/session` is sanitazed before saving in order to minimize the used space. Thus only the necessary files to perform exam correction are kept along with `.tex` files in case
 you need to regenerate any PDF (you will the need files inside `~/input` for that).
+
+6. Regarding the point above, `~/session` *IS NOT* saved if `i=1`, i.e., if you run `./~/examgen.sh 1`.
 
 ## Logging
 
