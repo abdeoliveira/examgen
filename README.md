@@ -181,7 +181,7 @@ of decimal digits. If `a` and `b` are used then the program will respect such a 
 The script can alternatively be run as `./examgen.sh i j`, where `j` is the number of alternatives for each question. 
 If `j` is absent, then `j=5` will be used by default, i.e., questions will have `(a) ... (e)` alternatives.
 
-3. After running `./examgen.sh`, if everything was fine, a single PDF document containing `i` exams will be opened in your screen. The actual file is `~/session/output.pdf`.
+3. After running `./examgen.sh i`, if everything was fine, a single PDF document containing `i` exams will be opened in your screen. The actual file is `~/session/output.pdf`.
 
 4. Each exam is stamped (bottom right of each page) with a code like `i/yyyy.mm.dd-hh.MM.ss`, standing for `exam_number/year.month.day-hour.minute.second`.
 
