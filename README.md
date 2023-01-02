@@ -58,7 +58,7 @@ The only files you must edit lie inside the `~/input/config` folder. They are `f
 
 * `header`: This is an OPTIONAL file. If present, it is intented to contain information regarding the School/College/University, Professor, Exam, Date, and whatever information the professor/teacher may find relevant to figure out in the exam header. It must follows the `LaTex` format. Despite it is optional, as stated before, I particularly think it is important to have one.
 
-* `lang`: It is a MUST HAVE file. It must contain a single line with two words separated by a comma as follows: `word1,word2`. `word1` must be related to the language used in in your document (`english` for instance). `word2` must be either `point` or `comma` and it stands for the symbol used for decimal separation. For example, the number `3/2` is represented as `1.5` if `point` is used whereas it is `1,5` if `comma` was choosen.
+* `lang`: It is a MUST HAVE file. It must contain a single line with two words separated by a comma as follows: `word1,word2`. `word1` refers to the language used in in your document (`english` for instance). `word2` must be either `point` or `comma` and it stands for the symbol used for decimal separation. For example, the resulting number from the operation `3/2` is represented as `1.5` if `point` is used whereas it is `1,5` if `comma` was choosen.
 
 * `markform`: A MUST HAVE file containing six words separated by comma. Each word will appear in a different part of the document. See the images below for details.
 
@@ -69,20 +69,20 @@ The only files you must edit lie inside the `~/input/config` folder. They are `f
 
 ### Creating questions
 
-You need to create exam questions in a specific format, necessarily with `.gnxs` extension. You may want to take a look in example files in the `~/input` folder while reading the next section. 
+Questions must be written in a specific format which will be discussed below. Each question is a single file having the `.gnxs` extension name, and must be located in the `~/input/questions` folder. You may want to take a look in example files inside the `~/input/questions` folder while reading the following paragraphs. 
 
-Question files must have 4 blocks, which are `@config`, `@question`, `@figure`, and `@answer`, and must terminate with `@end`.
+Each question file must have 4 blocks, which are `@config`, `@question`, `@figure`, and `@answer`, and must terminate with `@end`.
 
-You can adjust the number of alternatives for questions globally, i.e., all questions must have the same number of alternatives. This subject will be approached later.
+The number of alternatives for questions is a global variable (all questions must have the same number of alternatives) and will be discussed later.
 
 #### The `@config` block
 
-It has 2 entries: `mode:` and `inline:`. 
+Must have 2 entries: `mode:` and `inline:`. 
 
-`mode:` expects one of the following arguments, `numeric` or `text`. `numeric` is intended for questions with alternatives as numbers. 
+* `mode:` expects one of the following arguments, `numeric` or `text`. `numeric` is intended for questions with alternatives as numbers. 
 `text` is intended for questions with alternatives as texts. 
 
-`inline:` expects an integer number as argment and it stands for the number of alternatives in one line. Something between 5 and 8 do well for `mode:numeric` (e.g. `inline:8`) 
+* `inline:` expects an integer number as argment and it stands for the number of alternatives in one line. Something between 5 and 8 do well for `mode:numeric` (e.g. `inline:8`) 
 and I recommend `inline:1` for `mode:text`
 
 Check screenshots with the `inline:` variable in action. 
