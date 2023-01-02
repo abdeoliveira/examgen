@@ -33,7 +33,8 @@ class NUMERICALTS
       ###LOCALE
       variables.each do |v|
       x = subvar[v[0]].to_s
-      if ENV['EXAMGEN_LOCALE']=='ptbr' then x=x.sub('.',',') end
+      lang = File.read('../input/config/lang').split(',')[1].strip
+      if lang == 'comma' then x=x.sub('.',',') end
       s = ['@VAR(',v[0],')'].join
       q = q.sub(s,x)
     end
