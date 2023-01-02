@@ -187,9 +187,9 @@ If `j` is absent, then `j=5` will be used by default, i.e., questions will have 
 
 5. The folder `~/session` contains all the necessary information to perform the exam correction (see the next section). In case of accidental
 deletion of this folder there is no way to use the `correction.rb` program to automatically  correct the exams. For few exams (a dozen or so) 
-this is not a big deal. On the other hand, for a hundred exams the correction involving shuffled questions and alternatives with different numbers
-for variables can be a cumbersome task. Thus every time `~/examgen.sh` is run the `~/session` folder is saved as a hidden folder as
-`.session_yyy.mm.dd-hh.MM.ss`. This way you are able to correlate any generated PDF with the folder containg the files necessary for correction. 
+this is not a big deal. On the other hand, for a hundred exams the correction involving shuffled questions and alternatives, and also random numbers
+spread all over the place can be a cumbersome task. Thus every time `~/examgen.sh` is run the `~/session` folder is saved as a hidden folder as
+`~/.session_yyy.mm.dd-hh.MM.ss`. This way you are able to correlate any generated PDF with the folder containg the files necessary for correction. 
 `~/session` is sanitazed before saving in order to minimize the used space. Thus only the necessary files to perform exam correction are kept along with `.tex` files in case
 you need to regenerate any PDF (you will the need files inside `~/input` for that).
 
