@@ -195,7 +195,7 @@ you need to regenerate any PDF (you will the need files inside `~/input` for tha
 
 6. Regarding the point above, `~/session` *IS NOT* saved if `i=1`, i.e., if you run `./~/examgen.sh 1`.
 
-7. Ask to students to write their name and ID number in the very end of the exam. This is important to eventually identify missing exams for any reason. 
+7. Ask students to write their name and ID number in the very end of the exam (in the corresponding fiels). This is important to eventually identify missing exams for any reason. 
 
 ## Logging
 
