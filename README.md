@@ -60,7 +60,7 @@ The only files you must edit lie inside the `~/input/config` folder. They are `f
 
 * `lang`: It is a MUST HAVE file. It must contain a single line with two words separated by a comma as follows: `word1,word2`. `word1` refers to the language used in in your document (`english` for instance). `word2` must be either `point` or `comma` and it stands for the symbol used for decimal separation. For example, the resulting number from the operation `3/2` is represented as `1.5` if `point` is used whereas it is `1,5` if `comma` was choosen.
 
-* `markform`: A MUST HAVE file containing six words or sentences (spaces are allowed) separated by comma, like this: `word1,word2...,word6`. 
+* `markform`: A MUST HAVE file containing six words or sentences (spaces are allowed) separated by comma, like this: `word1,word2,...,word6`. 
 Each word (or sentence) will appear in a different part of the document. See the images below for details.
 
 ![alt text](screenshots/words-markform-1.png)
