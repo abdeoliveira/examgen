@@ -54,11 +54,11 @@ The only files you must edit lie inside the `~/input/config` folder. They are `f
 
 ### Configuration (the `~/input/config` folder)
 
-* `formulas`: This is an OPTIONAL file. If present, it must have N+1 lines, where the first one is a title (as for example, `Formulas` or `Formulas and Constants`) and followed by N lines consisting of equations which you want to provide to students during the test. Equations must follow the `LaTex` format WITHOUT the symbol `$`.
+* `formulas`: This is an OPTIONAL file. If present, it must have N+1 lines, where the first one is a title (as for example, `Formulas` or `Formulas and Constants`) followed by N lines consisting of equations which you want to provide to students during the test. Equations must follow the `LaTex` format WITHOUT the symbol `$`.
 
-* `header`: This is an OPTIONAL file. If present, it is intented to contain information regarding the School/College/University, Professor, Exam, Date, and whatever information the professor/teacher may find relevant to figure out in the exam header. It must follows the `LaTex` format. Despite it is optional, as stated before, I particularly think it is important to have one.
+* `header`: This is an OPTIONAL file. If present, it is intented to contain information regarding the School/College/University, Professor, Exam, Date, and whatever information the professor/teacher may find relevant to appear in exam headers. It must follows the `LaTex` format. Despite it is optional, as stated before, I particularly think it is important to have one.
 
-* `lang`: It is a MUST HAVE file. It must contain a single line with two words separated by a comma as follows: `word1,word2`. `word1` refers to the language used in in your document (`english` for instance). `word2` must be either `point` or `comma` and it stands for the symbol used for decimal separation. For example, the resulting number from the operation `3/2` is represented as `1.5` if `point` is used whereas it is `1,5` if `comma` was choosen.
+* `lang`: It is a MUST HAVE file. It must contains a single line with two words separated by a comma as follows: `word1,word2`. `word1` refers to the language used in in your document (`english` for instance). `word2` must be either `point` or `comma` and it stands for the symbol used for decimal separation. For example, the resulting number from the operation `3/2` is represented as `1.5` if `point` is used whereas it is `1,5` if `comma` was choosen.
 
 * `markform`: A MUST HAVE file containing six words or sentences (spaces are allowed) separated by comma, like this: `word1,word2,...,word6`. 
 Each word (or sentence) will appear in a different part of the document. See the images below for details.
