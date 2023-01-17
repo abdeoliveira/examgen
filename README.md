@@ -165,11 +165,19 @@ following format: `a:b,c,i`, where:
 
 The last two lines are `correct:` and `minmax:`. 
 
-* `correct:` has the equation for the correct answer and must be composed by the previously defined N variables. 
+- `correct:` has the equation for the correct answer and must be composed by the previously defined N variables. 
 *Note:* Here each variable must be prepended by the `$` symbol. For example, supposed the answer for a given question is calculated by the formula `F/m` 
 (borrowing our previous example). Then the line must be `correct:$F/$m`.
 
-* `minmax:` Defines the interval used to sample numbers to compose the wrong alternatives. It
+**NOTE 1:** Mathematical functions are expected to follow [Ruby's syntax](https://ruby-doc.org/core-2.6/Math.html). Examples:
+ - `sin(x)` is written in Ruby as `Math.sin(x)`
+ - `sqrt(x)` is written in Ruby as `Math.sqrt(x)`
+ - `2^3` (which is 8) is written in Ruby as `2**3`.
+ - `PI = 3.1415...` and `E = 2.7182...` are `Math::PI` and `Math::E` respectively. Although you may prefer to simple write the numbers, like me.
+
+ **NOTE 2:** Real numbers are expected to be written with `.` as decimal separator whatever is your language definitions.
+
+- `minmax:` Defines the interval used to sample numbers to compose the wrong alternatives. It
 expects either `auto,i` or `a,b,i` as arguments. `a` and `b` may be integer or real numbers and `i` is an integer.
 If `auto` is used then the program will try to guess a reasonble interval for sampling numbers. `i` is the number
 of decimal digits. If `a` and `b` are used then the program will respect such a user-defined interval.
@@ -206,11 +214,13 @@ you need to regenerate any PDF (you will the need files inside `~/input` for tha
 
 ## Correction
 
-To be written soon.
+
+
+### Ignoring questions
 
 
 ## Troubleshooting
 
-To be written, not so soon :-)
+To be written.
 
 
