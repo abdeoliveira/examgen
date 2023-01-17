@@ -226,12 +226,12 @@ To be written.
 For some reason you may want to ignore certain questions during correction. For example, you discovered that there was a bug in some of them. To do so, you need to create the file `/session/qignore` with the exact question file names (those `.gnxs` files), one per line. Like this:
 
 ```
-question-to-ignore-1
-question-to-ignore-2
+question-to-ignore-1.gnxs
+question-to-ignore-2.gnxs
 .
 .
 .
-question-to-ignore-N
+question-to-ignore-N.gnxs
 ```
 
 ## Troubleshooting
