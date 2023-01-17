@@ -45,7 +45,7 @@ If everything went well a PDF will be opened in your screen containing one sampl
 
 ## Quick Start
 
-xxx
+1. Create questions (try to follow the examples in  `input/questions/`)
 
 ## Manual
 
@@ -145,9 +145,9 @@ minmax:auto,1
 Here we have `@VAR(m)` and `@VAR(F)` in the `@question` block, which are correlated to `m:1,10,2` and `F:10,20,1` in the `@answer` block (more about
 such a block can be found below).
 
-In this example, the final document will have `m` randomly replaced by a number between `1` and `10` (closed interval) having `2` decimal digits. 
-For example, `m` can be `1.43`, `5.40`, `7.21`, `10.00`, and so on.  
-As you probably have already antecipated, `F` will be replaced by a random number between `10` and `20` with `1` decimal digit. 
+In this example, the final document will have `@VAR(m)` replaced by a random number between `1` and `10` (closed interval) having `2` decimal digits. 
+For example, `@VAR(m)` can be `1.43`, `5.40`, `7.21`, `10.00`, and so on.  
+As you probably have already antecipated, `@VAR(F)` will be replaced by a random number between `10` and `20` with `1` decimal digit, e.g., `10.0`, `12.5`, `19.9`, and so on.
 
 #### The `@figure` block
 
