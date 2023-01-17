@@ -182,7 +182,7 @@ expects either `auto,i` or `a,b,i` as arguments. `a` and `b` may be integer or r
 If `auto` is used then the program will try to guess a reasonble interval for sampling numbers. `i` is the number
 of decimal digits. If `a` and `b` are used then the program will respect such a user-defined interval.
 
-**NOTE:** `minmax` has a very clear use case which I consider a common pitfall for multiple-choise exams. Some wrong alternatives may be easily spotted as non-physical. For example, a question asking to calculate the maximum height `H` of an object launched with `v0` from a certain initial heigth `y0` must have an answer `H > y0`. It is possible that certain alternatives will be `H < y0` and a keen student will easily spot it. This is a typical case in which the `minmax:`  is useful.
+**NOTE:** `minmax` has a very clear use case which I consider a common pitfall for multiple-choice exams. For example, a question asking to calculate the maximum height `H` of an object launched upwards with velocity `v0` from a certain initial heigth `y0` must have an answer `H > y0`. It is possible that certain alternatives will not obbey this condition (due to the way I coded how alternatives are created in `auto` mode) and a keen student will easily spot it. This is a typical case in which the `minmax:`  is useful.
 
 ## Running
 
