@@ -205,10 +205,10 @@ deletion of such a folder there is no way to use the `correction/correction.rb` 
 this is not a big deal. On the other hand, for a hundred exams the correction involving shuffled questions and alternatives, and also random numbers
 spread all over the place can be a cumbersome task. Thus every time `examgen.sh` is run the `session/` folder is saved as a hidden folder as
 `.session_yyyy.mm.dd-hh.MM.ss`. This way you are able to correlate any generated PDF with the folder containg the files necessary for correction. 
-`session/` is sanitazed before saving in order to minimize the used space. Thus only the necessary files to perform exam correction are kept along with `.tex` files in case
+`session/` is sanitazed before saved in order to minimize the used space. Thus only the necessary files to perform exam correction are kept along with `.tex` files in case
 you need to regenerate any PDF (you will the need files inside `~/input` for that).
 
-6. Regarding the point above, `session/` *IS NOT* saved if `i=1`, i.e., if you run `./examgen.sh 1`.
+6. Regarding the point above, `session/` *IS NOT* saved if `i = 1`, i.e., if you run `./examgen.sh 1`.
 
 7. Ask students to write their name and ID number in the very end of the exam (in the corresponding fiels). This is important to eventually identify missing exams for any reason. 
 
