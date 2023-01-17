@@ -58,7 +58,7 @@ The only files you must edit lie inside the `~/input/config` folder. They are `f
 
 * `header`: This is an OPTIONAL file. If present, it is intented to contain information regarding the School/College/University, Professor, Exam, Date, and whatever information the professor/teacher may find relevant to figure out in the exam header. It must follows the `LaTex` format. Despite it is optional, as stated before, I particularly think it is important to have one.
 
-* `lang`: It is a MUST HAVE file. It must contain a single line with two words separated by a comma as follows: `word1,word2`. `word1` refers to the language used in in your document (`english` for instance). `word2` must be either `point` or `comma` and it stands for the symbol used for decimal separation. For example, the resulting number from the operation `3/2` is represented as `1.5` if `point` is used whereas it is `1,5` if `comma` was choosen.
+* `lang`: It is a MUST HAVE file. It must contains a single line with two words separated by a comma as follows: `word1,word2`. `word1` refers to the language used in in your document (`english` for instance). `word2` must be either `point` or `comma` and it stands for the symbol used for decimal separation. For example, the resulting number from the operation `3/2` is represented as `1.5` if `point` is used whereas it is `1,5` if `comma` was choosen.
 
 * `markform`: A MUST HAVE file containing six words or sentences (spaces are allowed) separated by comma, like this: `word1,word2,...,word6`. 
 Each word (or sentence) will appear in a different part of the document. See the images below for details.
@@ -173,6 +173,8 @@ The last two lines are `correct:` and `minmax:`.
 expects either `auto,i` or `a,b,i` as arguments. `a` and `b` may be integer or real numbers and `i` is an integer.
 If `auto` is used then the program will try to guess a reasonble interval for sampling numbers. `i` is the number
 of decimal digits. If `a` and `b` are used then the program will respect such a user-defined interval.
+
+**NOTE:** `minmax` has a very clear use case which I consider a pitfall. xxxxxxxxxxxxxxxxx
 
 ## Running
 
