@@ -177,7 +177,7 @@ The last two lines are `correct:` and `minmax:`.
  - `sin(x)` is written in Ruby as `Math.sin(x)`
  - `sqrt(x)` is written in Ruby as `Math.sqrt(x)`
  - `2^3` (which is 8) is written in Ruby as `2**3`.
- - `PI = 3.1415...` and `E = 2.7182...` are `Math::PI` and `Math::E` respectively. Although you may prefer to simple write the numbers, like me.
+ - `Math::PI = 3.1415...` and `Math::E = 2.7182...`. 
 
  **NOTE 2:** Real numbers are expected to be written with `.` as decimal separator whatever is your language definitions.
 
@@ -223,7 +223,7 @@ To be written.
 
 ### Ignoring questions
 
-For some reason you may want to ignore certain questions during correction. For example, you discovered that there was a bug in some of them. To do so, you need to create the file `/session/qignore` containning the exact question file names, one per line. Like this:
+For some reason you may want to ignore certain questions during correction. For example, you discovered that there were bugs in some of them. To do so, you need to create the file `/session/qignore` containning the exact question file names, one per line. Like this:
 
 ```
 question-to-ignore-1.gnxs
