@@ -25,6 +25,11 @@ and also
 
 will solve the aforementioned dependencies. For other distros, please check distro-specific docs for directions.
 
+# Installation
+
+ - Download this project and place the whole folder wherever you want.
+ - Note the executable `examgen.sh` expects to be inside the project folder since it assumes all paths as relatives.
+
 # Usage
 
 ## Quick Result
@@ -48,11 +53,11 @@ First, you need to clone this repo (this is the jargon for donwloading a git pro
 
 Once you have git, cast `git clone https://github.com/abdeoliveira/examgen`
 
-From now on, I will assume `~` as being the cloned repo folder, i.e., `cd examgen`. Thus if I referr to `~/src` for example, it means `/path/to/examgen/src`.
+From now on, I will assume `examgen/` as being the root of cloned repo folder. Thus if I referr to `src` or `src/` for example, it means `/path/to/examgen/src`.
 
-The only files you must edit lie inside the `~/input/config` folder. They are `formulas`, `header`, `lang`, and `markform`. 
+The only files you must edit lie inside the `input/config/` folder. They are `formulas`, `header`, `lang`, and `markform`. 
 
-### Configuration (the `~/input/config` folder)
+### Configuration (the `input/config` folder)
 
 * `formulas`: This is an OPTIONAL file. If present, it must have N+1 lines, where the first one is a title (as for example, `Formulas` or `Formulas and Constants`) and followed by N lines consisting of equations which you want to provide to students during the test. Equations must follow the `LaTex` format WITHOUT the symbol `$`.
 
@@ -70,7 +75,7 @@ Each word (or sentence) will appear in a different part of the document. See the
 
 ### Creating questions
 
-Questions must be written in a specific format which will be discussed below. Each question is a single file having the `.gnxs` extension name, and must be located in the `~/input/questions` folder. You may want to take a look in example files inside the `~/input/questions` folder while reading the following paragraphs. 
+Questions must be written in a specific format which will be discussed below. Each question is a single file having the `.gnxs` extension name, and must be located in the `input/questions/` folder. You may want to take a look in example files inside the `input/questions/` folder while reading the following paragraphs. 
 
 Each question file must have 4 blocks, which are `@config`, `@question`, `@figure`, and `@answer`, and must terminate with `@end`.
 
@@ -150,8 +155,7 @@ Contains two variables, which are `file:` and `width:`. The former expects a fig
 If there is no figure in the question, the argument must be `none`. The later expects the figure width as argument, if any. 
 If `file:none` then `width:` argument is ignored (although `width:` *must* be present).
 
-File figures must be located in the `~/input/figs` folder. My setup works well with the `png` format but you can use any one suitable to 
-by `LaTex`.
+File figures must be located in the `input/figs/` folder. My setup works well with the `png` format but you can use any one suitable to `LaTex`.
 
 #### The `@answer` block
 
@@ -182,35 +186,35 @@ expects either `auto,i` or `a,b,i` as arguments. `a` and `b` may be integer or r
 If `auto` is used then the program will try to guess a reasonble interval for sampling numbers. `i` is the number
 of decimal digits. If `a` and `b` are used then the program will respect such a user-defined interval.
 
-**NOTE:** `minmax` has a very clear use case which I consider a common pitfall for multiple-choice exams. For example, a question asking to calculate the maximum height `H` of an object launched upwards with velocity `v0` from a certain initial heigth `y0` must have an answer `H > y0`. It is possible that certain alternatives will not obbey this condition (due to the way I coded how alternatives are created in `auto` mode) and a keen student will easily spot it. This is a typical case in which the `minmax:`  is useful.
+**NOTE:** There is a common pitfall for multiple-choice exams. See for example a question asking to calculate the maximum height `H` of an object launched upwards with velocity `v0` from a certain initial heigth `y0` must have an answer `H > y0`. It is possible that certain alternatives will not obbey this condition (due to the way I coded how alternatives are created in `auto` mode) and a keen student will easily spot it. This is a typical case in which the `minmax:`  must *NOT* be used in `auto` mode.
 
 ## Running
 
-1. Ensure `~/examgen.sh` is executable by doing `chmod +x ~/examgen.sh`.
+1. Ensure `examgen.sh` is executable by doing `chmod +x examgen.sh`.
 
-2. Run `cd ~ && ./examgen.sh i`, where `i` is the number of exams to be generated.
+2. Run `cd examgen/ && ./examgen.sh i`, where `i` is the number of exams to be generated.
 The script can alternatively be run as `./examgen.sh i j`, where `j` is the number of alternatives for each question. 
 If `j` is absent, then `j=5` will be used by default, i.e., questions will have `(a) ... (e)` alternatives.
 
-3. After running `./examgen.sh i`, if everything was fine, a single PDF document containing `i` exams will be opened in your screen. The actual file is `~/session/output.pdf`.
+3. After running `./examgen.sh i`, if everything was fine, a single PDF document containing `i` exams will be opened in your screen. The actual file is `session/output.pdf`.
 
 4. Each exam is stamped (bottom right of each page) with a code like `i/yyyy.mm.dd-hh.MM.ss`, standing for `exam_number/year.month.day-hour.minute.second`.
 
-5. The folder `~/session` contains all the necessary information to perform the exam correction (see the next section). In case of accidental
-deletion of this folder there is no way to use the `correction.rb` program to automatically  correct the exams. For few exams (a dozen or so) 
+5. The folder `session/` contains all the necessary information to perform the exam correction (see the next section). In case of accidental
+deletion of such a folder there is no way to use the `correction/correction.rb` program to automatically  correct the exams. For few exams (a dozen or so) 
 this is not a big deal. On the other hand, for a hundred exams the correction involving shuffled questions and alternatives, and also random numbers
-spread all over the place can be a cumbersome task. Thus every time `~/examgen.sh` is run the `~/session` folder is saved as a hidden folder as
-`~/.session_yyyy.mm.dd-hh.MM.ss`. This way you are able to correlate any generated PDF with the folder containg the files necessary for correction. 
-`~/session` is sanitazed before saving in order to minimize the used space. Thus only the necessary files to perform exam correction are kept along with `.tex` files in case
+spread all over the place can be a cumbersome task. Thus every time `examgen.sh` is run the `session/` folder is saved as a hidden folder as
+`.session_yyyy.mm.dd-hh.MM.ss`. This way you are able to correlate any generated PDF with the folder containg the files necessary for correction. 
+`session/` is sanitazed before saving in order to minimize the used space. Thus only the necessary files to perform exam correction are kept along with `.tex` files in case
 you need to regenerate any PDF (you will the need files inside `~/input` for that).
 
-6. Regarding the point above, `~/session` *IS NOT* saved if `i=1`, i.e., if you run `./examgen.sh 1`.
+6. Regarding the point above, `session/` *IS NOT* saved if `i=1`, i.e., if you run `./examgen.sh 1`.
 
 7. Ask students to write their name and ID number in the very end of the exam (in the corresponding fiels). This is important to eventually identify missing exams for any reason. 
 
 ## Logging
 
-`LaTex` can be quite verbose. All that usual output typically generated by `LaTex` is piped to the `/tmp/examgen-latex.log` file.
+`LaTex` can be quite verbose. All that usual output typically generated by `LaTex` is piped to the `/tmp/examgen-latex.log` file. Note the `/tmp` folder is the one of your system, there is not a `tmp` folder inside `examgen/`.
 
 ## Correction
 
