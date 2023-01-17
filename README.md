@@ -218,10 +218,12 @@ you need to regenerate any PDF (you will the need files inside `~/input` for tha
 
 ## Correction
 
+To be written.
 
 
 ### Ignoring questions
 
+For some reason you may want to ignore certain questions during correction. For example, you discovered that there was a bug in some of them. To skip them, you need to create the file `/session/qignore` with the exact question file name (those `.gnxs` files) per line.  
 
 ## Troubleshooting
 
