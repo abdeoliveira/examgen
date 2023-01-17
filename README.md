@@ -190,9 +190,15 @@ of decimal digits. If `a` and `b` are used then the program will respect such a 
 
 ## Running
 
+<<<<<<< HEAD
 1. Ensure `examgen.sh` is executable by doing `chmod +x examgen.sh`.
 
 2. Run `cd examgen/ && ./examgen.sh i`, where `i` is the number of exams to be generated.
+=======
+1. Enter the project folder, `cd examgen`. Then, ensure `examgen.sh` is executable by doing `chmod +x examgen.sh`.
+
+2. Run `./examgen.sh i`, where `i` is the number of exams to be generated.
+>>>>>>> 0f7ace4 (update)
 The script can alternatively be run as `./examgen.sh i j`, where `j` is the number of alternatives for each question. 
 If `j` is absent, then `j=5` will be used by default, i.e., questions will have `(a) ... (e)` alternatives.
 
