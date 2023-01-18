@@ -170,7 +170,7 @@ following format: `a:b,c,i`, where:
 The last two lines are `correct:` and `minmax:`. 
 
 - `correct:` has the equation for the correct answer and must be composed by the previously defined N variables. 
-*Note:* Here each variable must be prepended by the `$` symbol. For example, supposed the answer for a given question is calculated by the formula `F/m` 
+*Note:* Here each variable must be prepended by the `$` symbol. For example, suppose the answer for a given question is calculated by the formula `F/m` 
 (borrowing our previous example). Then the line must be `correct:$F/$m`.
 
 **NOTE 1:** Mathematical functions are expected to follow [Ruby's syntax](https://ruby-doc.org/core-2.6/Math.html). Examples:
@@ -180,6 +180,8 @@ The last two lines are `correct:` and `minmax:`.
  - `Math::PI = 3.1415...` and `Math::E = 2.7182...`. 
 
  **NOTE 2:** Real numbers are expected to be written with `.` as decimal separator whatever is your language definitions.
+
+ **NOTE 3:** If there are variables declared in `@question` but not declared in `@answer` the program will give you a `Warning`.   
 
 - `minmax:` Defines the interval used to sample numbers to compose the wrong alternatives. It
 expects either `auto,i` or `a,b,i` as arguments. `a` and `b` may be integer or real numbers and `i` is an integer.
