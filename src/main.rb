@@ -16,7 +16,7 @@ num_exams = ARGV[0].to_i
 build = ARGV[2]
 q_in_line = 10 # For the form.rb. Currently only 10 is allowed
 
-#==========THE JANITOR OPENS THE SCHOOL===============
+#==========OPEN THE DOCUMENT===============
 
 janitor = JANITOR.new
 
@@ -100,12 +100,12 @@ num_exams.times do |j|
   latex.printformulas(output)
   latex.printstuidimage(output)
   latex.pagebreak(output)
-  FORM.new(q_in_line,num_exams,nalts,num_quests,output,j) #Print Form for students answers and ID
+  FORM.new(q_in_line,num_exams,nalts,num_quests,output,j) #Print Form: students answers and ID
   latex.printstuidtext(output)
   latex.closedoc(output)
 
 end  
-#==========THE JANITOR CLOSES THE SCHOOL====================
+#==========CLOSE THE DOCUMENT====================
 
 janitor.close(num_exams,num_quests,nalts,q_in_line)
 
