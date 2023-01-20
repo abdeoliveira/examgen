@@ -1,9 +1,9 @@
-Formulas and Constants
+Formulas e Constantes
 I=\frac{P_s}{4\pi r^2};~E=hf;~p=\frac{hf}{c}=\frac{h}{\lambda}
 hf=K_\mathrm{max}+\Phi;~\Delta\lambda=\frac{h}{mc}(1-\cos\phi)
 \frac{d^2\psi}{dx^2}+\frac{8\pi^2 m}{h^2}[E-U(x)]\psi=0
 \Delta x \Delta p = h/2\pi
-\epsilon_0 = 8.854\times10^{12}~\mathrm{F/m};~\mu_0 = 1.257\times10^{-6}~\mathrm{H/m}
-c = 3.0\times10^8~\mathrm{m/s}
-h=6.63\times10^{-34}~\mathrm{J/s}=4.14\times10^{-15}~\mathrm{eV.s}
+\epsilon_0 = 8,854\times10^{12}~\mathrm{F/m};~\mu_0 = 1,257\times10^{-6}~\mathrm{H/m}
+c = 3,0\times10^8~\mathrm{m/s}
+h=6,63\times10^{-34}~\mathrm{J/s}=4,14\times10^{-15}~\mathrm{eV.s}
 hc=1240~\mathrm{eV.nm};~~m_e c^2 = 511~\mathrm{keV}
