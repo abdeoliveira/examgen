@@ -1,0 +1,26 @@
+@config
+
+mode: text
+inline: 1
+
+@question
+
+Se $\vec{B}=B_x\hat{i}+B_y\hat{j}$ é somado ao vetor $\vec{C}=C_x\hat{i}+C_y\hat{j}$, o resultado é um vetor no sentido do semi-eixo $y$ positivo, com um módulo igual ao de $\vec{C}$. Com base nestas afirmações, marque a alternativa verdadeira.
+
+@figure
+
+file:none
+width:3.5cm
+
+@answer
+
+true: $B_x = -C_x$ e $B_y = \sqrt{C_x^2+C_y^2}-C_y$
+false: $B_x = -C_y$ e $B_y = -C_x$
+false: $B_x = -C_y$ e $B_y = C_x^2+C_y^2-C_x$
+false: $B_x = B_y = C_x = C_y$
+false: $B_x+B_y = C_x + C_y$
+
+@end
+
+
+

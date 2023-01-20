@@ -1,0 +1,25 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Um ventilador realiza @VAR(rpm) revoluções por minuto. Considere um ponto situado na extremidade de uma das pás, que descreve uma circunferência com @VAR(r) m de raio. Qual a velocidade em m/s desse ponto?
+
+@figure
+
+file:none
+width:3.5cm
+
+@answer
+
+rpm: 800,1500,0
+r: 0.1,0.3,2
+correct: $rpm*2*3.1415*$r/60
+minmax:auto,2
+
+@end
+
+
+

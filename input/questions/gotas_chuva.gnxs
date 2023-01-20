@@ -1,0 +1,24 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Gotas de chuva caem @VAR(h) m da nuvem até o chão. Se elas não estivessem sujeitas à resistência do ar, qual seria a velocidade ao atingir o solo em km/h?
+
+@figure
+
+file:none
+width:4.5cm
+
+@answer
+
+h:800,1500,0
+correct:3.6*Math.sqrt(2*9.8*$h)
+minmax:auto,1
+
+@end
+
+
+

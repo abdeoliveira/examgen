@@ -9,6 +9,7 @@ class STATISTICS
       sumv = sumv + v
       k = k.sub("../session/","")
       if v==0 then v="0.00" end
+      v = "%.2f"%v
       puts data="#{v} #{k}"
       File.write(logfile,"#{data}\n",mode:'a')
     end

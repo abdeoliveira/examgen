@@ -3,7 +3,7 @@ class CROP
   def initialize(file)
   #------------------------
     frame_tol  = 0.6  # tolerance for frame's black color
-    left = false
+    left = true
   #-----------------------
 #=========IMPORT RAW IMAGE======================  
     image = MiniMagick::Image.open(file)

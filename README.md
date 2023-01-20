@@ -240,4 +240,6 @@ question-to-ignore-N.gnxs
 
 To be written.
 
+## Known Bugs
 
+Mark forms should be placed in the same position for all exams since the `correction/correction.rb` program relies on that. Statistically about 5% of Forms will be placed in the opposite side of most of them. This is something I have to fix soon.

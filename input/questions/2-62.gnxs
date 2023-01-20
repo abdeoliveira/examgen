@@ -1,0 +1,24 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Uma bola é lançada verticalmente para cima a partir da superfície de outro planeta. O gráfico de $y$ em função de $t$  para a bola é mostrado na figura abaixo, onde $y$ é a altura da bola acima do ponto de lançamento e $t=0$ no instante em que a bola é lançada. A escala vertical do gráfico é definida por $y_s$ = @VAR(H) m. Qual é o módulo da aceleração em queda livre no planeta em m/s$^2$?
+
+@figure
+
+file:parabola
+width:4.0cm
+
+@answer
+
+H:20,60,0
+correct: 5.0*$H/3/2.5**2
+minmax:auto,1
+
+@end
+
+
+
