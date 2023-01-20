@@ -1,9 +1,10 @@
 require 'mini_magick'
 class CROP
-  def initialize(file)
+  def initialize(file,side)
   #------------------------
     frame_tol  = 0.6  # tolerance for frame's black color
-    left = true
+    left = false
+    if side == 'left' then left = true end
   #-----------------------
 #=========IMPORT RAW IMAGE======================  
     image = MiniMagick::Image.open(file)

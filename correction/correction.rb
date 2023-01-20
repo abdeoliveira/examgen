@@ -4,6 +4,11 @@ require './compare'
 require './report'
 require './warning'
 require './statistics'
+#===========MARKFORM SIDE==============
+unless ARGV[0]=='left' or ARGV[0]=='right' 
+  puts "Usage: 'ruby correction.rb <side>', where <side> = 'left' or 'right'."
+  abort
+end
 #============SOME READINGS=============
 scanned_exams = Dir["./IMAGES/Scan*.*"].sort!
 list = '../session/diario_classe.csv'
@@ -26,7 +31,7 @@ end
 #============================
 puts "NUMBER OF FILES: #{num_images}"
 scanned_exams.each.with_index do |file,m|
-    crop = CROP.new(file)
+    crop = CROP.new(file,ARGV[0])
     image = crop.image
     index = crop.index
     extract = EXTRACT.new(image)
