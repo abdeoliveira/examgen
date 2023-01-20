@@ -226,7 +226,7 @@ To be written.
 ### Ignoring questions
 
 For some reason you may want to ignore certain questions during correction. For example, you discovered that there were typos or bad coding in some of them. 
-To do so, you need to create the file `/session/qignore` containning question file names (with or without the `.gnxs` extension) to ignore, separated 
+To do so, you need to create the file `/session/qignore` containning the questions file names (with or without the `.gnxs` extension) to ignore, separated 
 by comma. Like this: `question-to-ignore-1.gnxs, question-to-ignore-2, ..., question-to-ignore-N`
 
 ## Troubleshooting
