@@ -46,6 +46,8 @@ If everything went well a PDF will be opened in your screen containing one sampl
 ## Quick Start
 
 1. Create questions (try to follow the examples in  `input/questions/`)
+2. To be written...
+3. ....
 
 ## Manual
 
