@@ -9,6 +9,11 @@ scanned_exams = Dir["./IMAGES/Scan*.*"].sort!
 list = '../session/diario_classe.csv'
 logfile = '../session/session.log'
 files = Dir['../session/*.gnxs']
+ignore_file = '../session/qignore'
+ignore = 'none'
+if File.exist? ignore_file
+  ignore = File.read(ignore_file).strip
+end
 #==A FEW INITIALIZATIONS/DEFINITIONS=====
 File.write(logfile,"",mode:'w')
 num_images = scanned_exams.length
@@ -33,17 +38,17 @@ scanned_exams.each.with_index do |file,m|
       score='?'
       examid='?'
     else
-      compare = COMPARE.new(examid,ans,stat)
+      compare = COMPARE.new(examid,ans,stat,ignore)
       score = compare.score
       stat = compare.stat
     end
     count[stuid]+=1
-    warning = WARNING.new(stuid,ans,errors,count)
+    warning = WARNING.new(stuid,ans,errors,count,ignore)
     check = warning.obs
     report.export(score,stuid,examid,list,index,check)
     log = "File:#{index}, #{ans.inspect}, ID:#{stuid}, Exam:#{examid}, Score:#{score}, Warnings:#{check}"
     puts log
     File.write(logfile,"#{log}\n",mode:'a')
 end
-unless num_images==0 then STATISTICS.new(stat,logfile,num_images) end
+unless num_images==0 then STATISTICS.new(stat,logfile,num_images,ignore) end
 #==========================
