@@ -1,7 +1,7 @@
 class JANITOR
 
   def initialize
-    session = Dir.exists? "../session"
+    session = Dir.exist? "../session"
     if session
       puts "There is already a running session. ABORTING."
       abort
