@@ -1,0 +1,25 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+ 
+Um próton cuja trajetória faz um ângulo de $30^{\circ}$ com a direção de um campo magnético de @VAR(B) mT experimenta uma força magnética de @VAR(F)$\times 10^{-19}$ N. Calcule a velocidade do próton em km/s. 
+
+@figure
+
+file:none
+width:10.0cm
+
+@answer
+
+B:1,10,1
+F:1,10,1
+correct:$F/1.6/$B/0.5
+minmax:auto,2
+
+@end
+
+
+

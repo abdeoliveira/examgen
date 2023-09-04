@@ -1,10 +1,13 @@
+require 'mini_magick'
 class EXTRACT
-  def initialize(image)
+  def initialize(file)
 #==============================
     tol_quest = 0.3 # FOR QUESTIONS
     tol_stuid = 0.1 # FOR STUDENT ID
     tol_examid = 0.6 # FOR EXAM ID
-#==============================
+#===========IMPORT CROPPED IMAGE===========
+    image = MiniMagick::Image.open(file)
+#==========================================
   auxdata = File.readlines('../session/auxfile').first.split(' ')
   num_exams = auxdata[0].to_i
   num_quest = auxdata[1].to_i

@@ -1,0 +1,24 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+A figura mostra 1 fio longo percorrido por corrente de módulo @VAR(vi) (A), 
+onde raio R é @VAR(vr) (m). O módulo do campo magnético no ponto p em $\mu T$ é:
+@figure
+
+file:fig_2-6
+width:4.5cm
+
+@answer
+
+vi:1,4,1
+vr:1,4,1
+correct:1.2556*$vi/(4*$vr)
+minmax:auto,2
+
+@end
+
+
+

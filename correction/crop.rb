@@ -1,16 +1,14 @@
 require 'mini_magick'
 class CROP
-  def initialize(file,side)
+  def initialize(file,side,cropname)
   #------------------------
     frame_tol  = 0.6  # tolerance for frame's black color
     left = false
-    if side == 'left' then left = true end
+    if side == 'l' then left = true end
   #-----------------------
 #=========IMPORT RAW IMAGE======================  
     image = MiniMagick::Image.open(file)
     pixels = image.get_pixels
-    index = file.scan(/\d+/).first #retrieve file number, e.g. 'Scan 0.png' => 0
-    format = file.split('.')[2] #retrieve file format, e.g. 'Scan 0.png' => png
 #=========BLACK PIXEL MEASUREMENT================
   def black_pixel(l,c,pixels)
     red   = pixels[l][c][0]
@@ -27,8 +25,6 @@ class CROP
     if left then x = 0  end
     image.crop "#{image.width/2}x#{image.height/2}+#{x}+0"
     pixels = image.get_pixels
-    #image.write "./IMAGES/cropped_#{index}.#{format}"
-    #abort
 #=============FIND WIDTH (BEFORE ROTATION)=========================
     l = image.height/2
     c_min = image.width
@@ -57,8 +53,6 @@ class CROP
     angle = convert*Math.atan(dy/dx)
     image.rotate(-angle)
     pixels = image.get_pixels
-     #image.write "./IMAGES/cropped_#{index}.#{format}"
-     #abort
 #==============FIND HEIGHT======================  
     c = image.width/2
     l_min = image.height
@@ -86,16 +80,7 @@ class CROP
         c.repage.+
         c.crop "#{del_c}x#{del_l}+#{c_min}+#{l_min}" 
       end
-      image.write "./IMAGES/cropped_#{index}.#{format}"
-#==============================================
-      @image = image
-      def self.image
-        @image
-      end
-      @index = index
-      def self.index
-        @index
-      end
+      image.write cropname
 #==============================================
   end
 end

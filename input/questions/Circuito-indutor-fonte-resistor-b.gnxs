@@ -1,0 +1,27 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+Na figura $\varepsilon$=@VAR(vv) (V), $R_1=R_2$=@VAR(vr) ($\Omega$), $R_3=$@VAR(va) ($\Omega$) e L=@VAR(vl) ($\mu H$).
+A corrente $i_1$ um longo tempo após a chave ser fechada em amperes é: 
+@figure
+
+file:fig_2-4
+width:3.5cm
+
+@answer
+
+vv:10,100,1
+vl:1,3,1
+vr:10,1000,1
+va:10,1000,1
+correct:$vv/($vr+$vr*$va/($vr+$va))
+minmax:auto,2
+
+@end
+
+
+

@@ -1,0 +1,29 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+A figura mostra uma semicircunferência de raio @VAR(va) (m) que gira com uma frequência 
+de @VAR(vf) (Hz) na presença de um campo magnético @VAR(vb) (mT). 
+Sendo a resistência @VAR(vr) ($\Omega$) a amplitude da corrente induzida no circuito em miliamperes é:
+
+@figure
+
+file:fig_2-2
+width:3.5cm
+
+@answer
+
+va:0.1,0.3,1
+vf:1,50,1
+vb:1,3,1
+vr:10,1000,1
+correct:($vf*$vb*(3.141592*$va)**2)/$vr
+minmax:auto,2
+
+@end
+
+
+

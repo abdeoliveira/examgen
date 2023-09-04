@@ -1,0 +1,27 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+Três fios longos são montados nos vértices de um triângulo equilátero, como mostra a figura. Os fios são percorridos por 
+correntes $I_1=I_2=I_3=$ @VAR(vi) (A) e cada lado do triângulo tem lado
+@VAR(va) (m). O módulo da força por unidade de comprimento sentida no fio 3 em $\mu$N/m é:
+
+
+@figure
+
+file:fig_2-1
+width:3.5cm
+
+@answer
+
+vi:1,3,1
+va:0.1,0.4,1
+correct:0.8666666*(1.2566*$vi**2)/3.141592*$va
+minmax:auto,2
+
+@end
+
+
+

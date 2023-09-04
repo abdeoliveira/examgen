@@ -1,0 +1,26 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+
+O fio dobrado da figura abaixo está submetido a um campo magnético uniforme. Cada trecho retilíneo tem @VAR(L) m de comprimento e faz um ângulo $\theta=60^{\circ}$ com o eixo $x$. O fio é percorrido por uma corrente de @VAR(i) A. Qual é o módulo da força magnética em N sobre o fio se o campo magnético é @VAR(B)$\hat{k}$ T?  
+
+@figure
+
+file:fig-2-wires.png
+width:5.0cm
+
+@answer
+
+B:1,10,1
+i:1,10,1
+L:1,10,1
+correct:$i*$L*$B
+minmax:auto,1
+
+@end
+
+
+

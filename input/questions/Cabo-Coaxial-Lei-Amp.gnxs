@@ -1,0 +1,26 @@
+@config
+
+mode: numeric
+inline: 8
+
+@question
+A figura mostra um cabo coaxial com correntes em sentidos opostos, onde $I_1$ @VAR(vi)(A), $I_2$= @VAR(vb) (A) e a=@VAR(va) (m). 
+O módulo do campo magnético em $P_1$ em $/mu T$ é:
+
+@figure
+
+file:fig_2-5
+width:4.5cm
+
+@answer
+
+vi:1,4,1
+vb:1,4,1
+va:0.1,0.3,1
+correct:1.2556*$vi/(2*3.141592*$va)
+minmax:auto,2
+
+@end
+
+
+
