@@ -223,13 +223,11 @@ you need to regenerate any PDF (you will the need files inside `~/input` for tha
 
 The `correction/` folder contains the programs used to perform exam correction. For doing that you need to:
 
-1. Scan the exams and name the image files as `Scan-<N>.<ext>` where `<N>` is a number and `<ext>` is the file extension. `<N>` must not be necessarily sequential since it is used solely to associate the extracted data to a file (this will ne clearer during the following paragraphs). I recommend `<ext> = png` but you may use any figure format suitable to [ImageMagick](https://imagemagick.org/) (this is the program used to manipulate exam images and extract data from).
-**NOTE:** I intend to simplify this naming convention soon by simply requiring the scanned files are images, having any names and extensions. Or not having an extension name at all.
-2. Save the aforementioned scanned images to `correction/IMAGES/`. You will have to create such a folder; ir it not shipped with the repo. Please note the cappitalized letters.
+1. Scan the exams into a file format suitable to [ImageMagick](https://imagemagick.org/) (this is the program used to manipulate exam images and extract data from). I recommend `jpg` or `png`. 
+2. Save the aforementioned scanned images to the `correction/IMAGES/` folder. You will have to create such a folder since it is not shipped with the repo. Please note the cappitalized letters.
 3. Check in which side of the paper the markform lies, left or right. See the image below. In this example the Markform lies in the left side of the paper. You will need this information for the next step below.
 ![alt text](screenshots/markform-side.png "side: left")
-4. cd `correction/`, then run `ruby correction.rb <side>`, in which `<side> = left`  or `<side> = right`  depending on your findings on the step 3 above.
-5. To be continued...
+4. cd `correction/`, then run `ruby correction.rb <side> <pattern>`, in which `<side> = l`  or `<side> = r`  depending on your findings on the step 3 above. `<pattern>` is the pattern of scanned file names (see item 1. above). If for example the scanned files are named `scan.1.png`, `scan.2.png`, `...`, and also the markform is located in the right side, the correction command shall be `ruby correction.rb r scan`.
 
 ### Ignoring questions
 
