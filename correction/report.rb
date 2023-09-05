@@ -1,7 +1,7 @@
 require 'csv'
 class REPORT
   def initialize
-    header="NAME;CLASS;ID;GRADE;EXAM;FILE;WARNING\n"
+    header="NAME;CLASS;ID;SCORE;EXAM;FILE;WARNING\n"
     File.write('../session/report.csv',header,mode:'w')
   end
   def export(score,stuid,examid,file,index,obs)

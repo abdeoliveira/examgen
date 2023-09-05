@@ -39,7 +39,7 @@ def line_correction(f,boost)
 end
 #==============QUESTIONS============
     alphabet=[*'a'..'z']
-    ans = Array.new(num_quest,'blank')
+    ans = Array.new(num_quest,'BLANK')
       num_quest.times do |i|
         f = i/q_in_line
         x = (i+1)*dx + dx/2 - f*q_in_line*dx 
@@ -60,7 +60,7 @@ end
             end
           end
         if black/count > tol_quest then q_count+=1; ans[i] = alphabet[j] end
-        if q_count > 1 then ans[i]='dupe' end
+        if q_count > 1 then ans[i]='DUPE' end
       end
     end
 #===============STUDENT ID============

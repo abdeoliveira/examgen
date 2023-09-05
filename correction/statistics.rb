@@ -1,20 +1,19 @@
 class STATISTICS
-  def initialize(stat,logfile,num_images,ignore)
+  def initialize(logfile,num_images,ignore,stat_file,num_quests)
+    total = num_images*(num_quests - ignore.split(',').length)
+    nra = `wc -l #{stat_file}`.to_i
+    count = Hash.new(0)
     puts title="=============STATISTICS============\n"
     File.write(logfile,title,mode:'a')
-    sumv = 0
-    numq = stat.length
-    stat.each do |k,v|
-      v = (v.to_f/num_images).round(2)
-      sumv = sumv + v
-      k = k.sub("../session/","")
-      if v==0 then v="0.00" end
-      v = "%.2f"%v
-      if ignore.include? k or ignore.include? k.sub('.gnxs','') then v = " IGN"; numq-=1 end
-      puts data="#{v} #{k}"
+    File.readlines(stat_file).each do |k|
+      count[k.strip]+=1
+    end
+    count.sort_by{|k,v|v}.reverse.each do |k,v|
+      percent = v.to_f/num_images
+      puts data="#{percent.round(2)} #{k} (#{v})"
       File.write(logfile,"#{data}\n",mode:'a')
     end
-    puts final = "-----------------\nOverall average: #{(sumv/numq).round(3)}\n-----------------\n"
+    puts final = "-----------------\nOverall average: #{(nra/total.to_f).round(3)}\n-----------------\n"
     File.write(logfile,final,mode:'a')
   end
 end
