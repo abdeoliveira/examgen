@@ -44,7 +44,7 @@ scanned_exams.each do |file|
     ff = file.sub(images_path,'')
     cropped_file = images_path+'cropped.'+ff
     unless File.exist? cropped_file
-      crop = CROP.new(file,side,cropped_file)
+      CROP.new(file,side,cropped_file)
     end
     extract = EXTRACT.new(cropped_file)
     examid = extract.examid
