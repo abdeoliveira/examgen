@@ -16,7 +16,7 @@ fi
 NOW=$(date +"%Y.%m.%d-%H.%M.%S")
 if [[ -d ./session ]];then
 	BUILD=$(cat ./session/build)
-	rm ./session/*.pdf && rm ./session/*.log && rm ./session/*.aux
+	rm -f ./session/*.pdf && rm -f ./session/*.log && rm -f ./session/*.aux
 	if [[ $1 != 1 ]]; then
         	mv session ./.session_$BUILD
 	else
